@@ -1,0 +1,12 @@
+dragen \
+  --bcl-conversion-only=true \
+  --bcl-input-directory RNA_Run \
+  --output-directory RNA_Fastq_Reverse \
+  --force \
+  --sample-sheet RNA_Run/asangla_rnaseq_samplesheet_bclconvert_reverse.csv \
+  --bcl-num-conversion-threads 20 \
+  --bcl-num-compression-threads 20 \
+  --run-info RNA_Run/RunInfo.xml \
+  --fastq-compression-format gzip \
+  --bcl-enable-tile-metrics=true \
+  --output-legacy-stats=true
