@@ -1,0 +1,585 @@
+platform:
+  version: R version 4.6.1 (2026-06-24 ucrt)
+  os: Windows 11 x64 (build 26200)
+  system: x86_64, mingw32
+  ui: Positron
+  language: (EN)
+  collate: English_United States.utf8
+  ctype: English_United States.utf8
+  tz: Asia/Calcutta
+  date: '2026-07-17'
+  pandoc: 3.9 @ C:\Users\hp\AppData\Local\Pandoc\pandoc.exe
+  quarto: 1.9.38 @ c:\PROGRA~1\Positron\RESOUR~1\app\quarto\bin\quarto.exe
+packages:
+  package:
+  - AnnotationDbi
+  - Biobase
+  - BiocGenerics
+  - BiocManager
+  - Biostrings
+  - bit
+  - bit64
+  - blob
+  - cachem
+  - cellranger
+  - class
+  - cli
+  - crayon
+  - DBI
+  - devtools
+  - dplyr
+  - ellipsis
+  - fastmap
+  - fs
+  - generics
+  - glue
+  - httr
+  - IRanges
+  - KEGGREST
+  - lifecycle
+  - magrittr
+  - memoise
+  - org.Hs.eg.db
+  - pillar
+  - pkgbuild
+  - pkgconfig
+  - pkgload
+  - png
+  - purrr
+  - R6
+  - readxl
+  - renv
+  - rlang
+  - RSQLite
+  - S4Vectors
+  - Seqinfo
+  - sessioninfo
+  - tibble
+  - tidyr
+  - tidyselect
+  - usethis
+  - utf8
+  - vctrs
+  - withr
+  - XVector
+  - yaml
+  ondiskversion:
+  - 1.74.0
+  - 2.72.0
+  - 0.58.1
+  - 1.30.27
+  - 2.80.1
+  - 4.6.0
+  - 4.8.2
+  - 1.3.0
+  - 1.1.0
+  - 1.1.0
+  - 7.3.23
+  - 3.6.6
+  - 1.5.3
+  - 1.3.0
+  - 2.5.2
+  - 1.2.1
+  - 0.3.3
+  - 1.2.0
+  - 2.1.0
+  - 0.1.4
+  - 1.8.1
+  - 1.4.8
+  - 2.46.0
+  - 1.52.2
+  - 1.0.5
+  - 2.0.5
+  - 2.0.1
+  - 3.23.1
+  - 1.11.1
+  - 1.4.8
+  - 2.0.3
+  - 1.5.3
+  - 0.1.9
+  - 1.2.2
+  - 2.6.1
+  - 1.5.0
+  - 1.2.3
+  - 1.3.0
+  - 3.53.3
+  - 0.50.1
+  - 1.2.0
+  - 1.2.4
+  - 3.3.1
+  - 1.3.2
+  - 1.2.1
+  - 3.2.1
+  - 1.2.6
+  - 0.7.3
+  - 3.0.3
+  - 0.52.0
+  - 2.3.12
+  loadedversion:
+  - 1.74.0
+  - 2.72.0
+  - 0.58.1
+  - 1.30.27
+  - 2.80.1
+  - 4.6.0
+  - 4.8.2
+  - 1.3.0
+  - 1.1.0
+  - 1.1.0
+  - 7.3-23
+  - 3.6.6
+  - 1.5.3
+  - 1.3.0
+  - 2.5.2
+  - 1.2.1
+  - 0.3.3
+  - 1.2.0
+  - 2.1.0
+  - 0.1.4
+  - 1.8.1
+  - 1.4.8
+  - 2.46.0
+  - 1.52.2
+  - 1.0.5
+  - 2.0.5
+  - 2.0.1
+  - 3.23.1
+  - 1.11.1
+  - 1.4.8
+  - 2.0.3
+  - 1.5.3
+  - 0.1-9
+  - 1.2.2
+  - 2.6.1
+  - 1.5.0
+  - 1.2.3
+  - 1.3.0
+  - 3.53.3
+  - 0.50.1
+  - 1.2.0
+  - 1.2.4
+  - 3.3.1
+  - 1.3.2
+  - 1.2.1
+  - 3.2.1
+  - 1.2.6
+  - 0.7.3
+  - 3.0.3
+  - 0.52.0
+  - 2.3.12
+  path:
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/AnnotationDbi
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Biobase
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/BiocGenerics
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/BiocManager
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Biostrings
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/bit
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/bit64
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/blob
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cachem
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cellranger
+  - C:/Users/hp/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.6/x86_64-w64-mingw32/862924a9/class
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cli
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/crayon
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/DBI
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/devtools
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/dplyr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/ellipsis
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/fastmap
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/fs
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/generics
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/glue
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/httr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/IRanges
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/KEGGREST
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/lifecycle
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/magrittr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/memoise
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/org.Hs.eg.db
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pillar
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgbuild
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgconfig
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgload
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/png
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/purrr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/R6
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/readxl
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/renv
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/rlang
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/RSQLite
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/S4Vectors
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Seqinfo
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/sessioninfo
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tibble
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tidyr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tidyselect
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/usethis
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/utf8
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/vctrs
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/withr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/XVector
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/yaml
+  loadedpath:
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/AnnotationDbi
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Biobase
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/BiocGenerics
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/BiocManager
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Biostrings
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/bit
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/bit64
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/blob
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cachem
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cellranger
+  - C:/Program Files/R/R-4.6.1/library/class
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/cli
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/crayon
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/DBI
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/devtools
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/dplyr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/ellipsis
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/fastmap
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/fs
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/generics
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/glue
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/httr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/IRanges
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/KEGGREST
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/lifecycle
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/magrittr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/memoise
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/org.Hs.eg.db
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pillar
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgbuild
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgconfig
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/pkgload
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/png
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/purrr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/R6
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/readxl
+  - C:/Users/hp/AppData/Local/R/win-library/4.6/renv
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/rlang
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/RSQLite
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/S4Vectors
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/Seqinfo
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/sessioninfo
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tibble
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tidyr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/tidyselect
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/usethis
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/utf8
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/vctrs
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/withr
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/XVector
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32/yaml
+  attached:
+  - yes
+  - yes
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - yes
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  is_base:
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  - no
+  date:
+  - '2026-04-28'
+  - '2026-04-28'
+  - '2026-05-14'
+  - '2025-11-14'
+  - '2026-05-22'
+  - '2025-03-06'
+  - '2026-05-19'
+  - '2026-01-14'
+  - '2024-05-16'
+  - '2016-07-27'
+  - '2025-01-01'
+  - '2026-04-09'
+  - '2024-06-20'
+  - '2026-02-25'
+  - '2026-04-30'
+  - '2026-04-03'
+  - '2026-04-04'
+  - '2024-05-15'
+  - '2026-04-18'
+  - '2025-05-09'
+  - '2026-04-17'
+  - '2026-02-13'
+  - '2026-04-28'
+  - '2026-06-18'
+  - '2026-01-08'
+  - '2026-04-04'
+  - '2021-11-26'
+  - '2026-07-16'
+  - '2025-09-17'
+  - '2025-05-26'
+  - '2019-09-22'
+  - '2026-06-15'
+  - '2026-03-15'
+  - '2026-04-10'
+  - '2025-02-15'
+  - '2026-05-16'
+  - '2026-05-16'
+  - '2026-07-05'
+  - '2026-06-30'
+  - '2026-05-03'
+  - '2026-04-28'
+  - '2026-06-04'
+  - '2026-01-11'
+  - '2025-12-19'
+  - '2024-03-11'
+  - '2025-09-06'
+  - '2025-06-08'
+  - '2026-04-11'
+  - '2026-06-19'
+  - '2026-04-28'
+  - '2025-12-10'
+  source:
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - CRAN (R 4.6.1)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - Bioconductor 3.23 (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - Bioconductor
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.0)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - CRAN (R 4.6.1)
+  - https://bioc-release.r-universe.dev (R 4.6.0)
+  - CRAN (R 4.6.1)
+  md5ok:
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - .na
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  - yes
+  library:
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - .na.character
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - .na.character
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
+  - D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32
