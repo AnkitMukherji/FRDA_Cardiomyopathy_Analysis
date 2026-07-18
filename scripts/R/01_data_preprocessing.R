@@ -4,6 +4,9 @@
 # Activate project-specific renv environment
 renv::load("scripts/R")
 
+# Activate helper scripts
+source("scripts/R/helper_scripts.R")
+
 # Load required packages
 library(AnnotationDbi)
 library(dplyr)
@@ -16,8 +19,19 @@ paths_config <- yaml::read_yaml("config/paths.yaml")
 metadata_path <- file.path(paths_config$metadata, "metadata_clean.xlsx")
 counts_dir <- paths_config$count_data
 
-# Load Metadata
+# Load Metadata and convert metadata columns into factors or numeric
 metadata <- read_excel(metadata_path, sheet = "Metadata_Clean")
+metadata_df <- as.data.frame(metadata)
+rownames(metadata_df) <- metadata_df$sample_id
+
+categorical_features <- c("condition", "day", "sequencing_batch", "sex", "cardiac_phenotype", "donor_id")
+continuous_features  <- c("age", "LA", "UA")
+
+metadata <- prepare_metadata_types(
+  metadata = metadata_df,
+  factor_cols = categorical_features,
+  numeric_cols = continuous_features
+)
 
 # Load Feature Count Matrices
 # Day15_Batch1 = 44
@@ -64,7 +78,7 @@ for (name in names(counts_list)) {
 
   # Removing the original Geneid column and aggregating counts by Symbol (sum duplicates)
   agg_df <- mapped_df |> 
-    select(-Geneid) |> 
+    dplyr::select(-Geneid) |> 
     group_by(Symbol) |> 
     summarise(across(everything(), sum)) |> 
     ungroup()
@@ -91,13 +105,18 @@ if (length(missing_samples) > 0) {
 
 # Order and keep sample columns present in metadata
 aligned_counts_df <- merged_counts |> 
-  select(Symbol, all_of(metadata$sample_id))
-all(colnames(count_matrix) == metadata$sample_id)
+  dplyr::select(Symbol, all_of(metadata$sample_id))
 
 # Converting to matrix and set rownames
 count_matrix <- as.matrix(aligned_counts_df[, -1])
 rownames(count_matrix) <- aligned_counts_df$Symbol
+dim(count_matrix)
 # Dimension = 38341 x 101
+
+dim(metadata)
+# Dimension = 101 x 13
+
+all(colnames(count_matrix) == rownames(metadata))
 
 # Saving the processed data
 processed_data <- list(
