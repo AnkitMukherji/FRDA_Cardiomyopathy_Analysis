@@ -9,13 +9,13 @@ source("scripts/R/helper_scripts.R")
 
 # Required packages
 library(DESeq2)
-library(dplyr)
 library(ggplot2)
 library(limma)
 library(matrixStats)
 library(openxlsx)
 library(pheatmap)
 library(readxl)
+library(tidyverse)
 library(yaml)
 
 # Load processed data from 01_data_preprocessing and Config
@@ -185,7 +185,14 @@ mapping_metrics <- read_excel(
     file.path(qc_dir, "mapping_metrics/mapping_metrics_for_all_batches.xlsx"),
     sheet = "QC_compiled"
 )
-samples_to_exclude <- mapping_metrics$Sample[mapping_metrics$Keep == "No"]
+metadata_samples_to_keep_col_add <- metadata |> 
+  rownames_to_column(var = "row_names_temp") |> 
+  left_join(
+    mapping_metrics |> select(Sample, `Samples to exclude`), 
+    join_by("sample_id" == "Sample")) |> 
+  column_to_rownames(var = "row_names_temp")
+
+samples_to_exclude <- mapping_metrics$Sample[mapping_metrics$`Samples to exclude` == "No"]
 # 12 samples to exclude
 filtered_counts_samples_removed <- filtered_counts[, !colnames(filtered_counts) %in% samples_to_exclude]
 metadata_samples_removed <- metadata[!metadata$sample_id %in% samples_to_exclude, ]
@@ -267,6 +274,7 @@ pheatmap(
 dev.off()
 
 # Saving the processed data along with batch-effect corrected counts
+processed_data$metadata <- metadata_samples_to_keep_col_add
 processed_data$filtered_counts <- filtered_counts
 processed_data$filtered_counts_batch_effect_corrected <- mat
 processed_data$filtered_counts_batch_effect_corrected_samples_removed <- mat_samples_removed
