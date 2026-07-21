@@ -1,0 +1,174 @@
+# Day-specific marker analysis of cardiomyocytes
+# Correlating expression with GAA repeat lengths in patient samples
+
+# Activating project-specific renv environment
+renv::load("scripts/R")
+
+# Activate helper scripts
+source("scripts/R/helper_scripts.R")
+
+library(DESeq2)
+library(ggplot2)
+library(pheatmap)
+library(tidyverse)
+library(yaml)
+
+# Load Processed Data and Config
+processed_data <- readRDS("data/processed_data_batch_effect_corrected_qced_samples.rds")
+counts <- processed_data$filtered_counts_batch_effect_corrected
+metadata <- processed_data$metadata
+
+# Cardiac maturation and identity markers
+markers <- c(
+  # Pluripotent state
+  "OCT4", "SOX2", "NANOG", "POU5F1",
+  # Primitive Mesoderm
+  "TBXT",
+  # Cardiac Progenitors
+  "ISL1", "KDR", "MESP1",
+  # Early Cardiomyocytes
+  "NKX2-5", "TNNT2", "ACTN2", "MYH6",
+  # Maturing Cardiomyocytes
+  "MYL2", "MYL7", # Day 12-15+ and Day 20-40
+  "GJA1", # GJA1 encoding Connexin 43 # Day 12-15+
+  "GATA4", "MEF2C", # Day 12-15+
+  # Contractile & Sarcomere
+  "TNNT2", "MYH6", "MYH7", "ACTC1", "ACTN2", "MYL2", "MYL7",
+  # Calcium Handling
+  "RYR2", "PLN", "ATP2A2", "CACNA1C", "SLC8A1",
+  # Transcription Factors
+  "NKX2-5", "GATA4", "MEF2C", "TBX5",
+  # Natriuretic Peptides (Stress/development)
+  "NPPA", "NPPB"
+)
+
+markers_present <- markers[markers %in% rownames(counts)] |> unique()
+# OCT4 absent
+# Brachyury, a transcription factor 
+# encoded by Gene TBXT is filtered out due to low counts
+cat("Defined", length(unique(markers)), "markers. Present in dataset:", length(unique(markers_present)), "\n")
+# Total 25 markers out of 27 defined are present in the dataset
+
+marker_exp <- counts[markers_present, , drop = FALSE]
+marker_df <- as.data.frame(marker_exp) |> 
+  rownames_to_column("Gene") |> 
+  pivot_longer(-Gene, names_to = "sample_id", values_to = "Expression") |> 
+  left_join(metadata, by = "sample_id")
+
+# Boxplot of marker genes between cardiac phenotypes stratified by day
+p_box <- ggplot(marker_df, aes(x = day, y = Expression, fill = cardiac_phenotype)) +
+  geom_boxplot(outlier.size = 0.8, alpha = 0.85, width = 0.6, position = position_dodge(0.7)) +
+  facet_wrap(~ Gene, scales = "free_y", ncol = 5) +
+  scale_fill_manual(values = color_palettes$cardiac_phenotype) +
+  labs(
+    title = "Expression of Cardiomyocyte Maturation & Identity Markers",
+    subtitle = "Batch-effect corrected counts across Day 15 and Day 52",
+    x = "Timepoint (Day)",
+    y = "Expression",
+    fill = "Cardiac Phenotype"
+  ) +
+  theme_custom() +
+  theme(
+    legend.position = "bottom",
+    strip.text = element_text(face = "bold", size = 9))
+
+boxplots_file <- file.path(marker_analysis_dir, "maturation_markers_boxplot.png")
+ggsave(
+  filename = boxplots_file,
+  plot = p_box,
+  width = fig_width + 5,
+  height = fig_height + 4,
+  dpi = fig_dpi
+)
+
+# Expression Heatmap for each sample
+# Order samples by Day, then Condition, then Cardiac Phenotype to highlight maturation
+ordered_metadata <- metadata |> 
+  arrange(day, condition, cardiac_phenotype)
+
+heatmap_data <- counts[markers_present, ordered_metadata$sample_id, drop = FALSE]
+
+# Row-wise Z-score normalization
+heatmap_data_z <- t(scale(t(heatmap_data)))
+
+annotation_df <- data.frame(
+  Condition = ordered_metadata$condition,
+  Timepoint = ordered_metadata$day,
+  Phenotype = ordered_metadata$cardiac_phenotype,
+  Exclusion = ordered_metadata$`Samples to include`,
+  row.names = ordered_metadata$sample_id
+)
+
+annotation_colors <- list(
+  Condition = color_palettes$condition,
+  Timepoint = color_palettes$day,
+  Phenotype = color_palettes$cardiac_phenotype,
+  Exclusion = c("Yes" = "#1b4332", "No" = "#d62828") 
+)
+
+heatmap_file <- file.path(marker_analysis_dir, "maturation_markers_heatmap.png")
+png(heatmap_file, width = (fig_width + 10) * fig_dpi, height = (fig_height + 1) * fig_dpi, res = fig_dpi)
+pheatmap(
+  heatmap_data_z,
+  annotation_col = annotation_df,
+  annotation_colors = annotation_colors,
+  cluster_cols = FALSE, # Maintain chronological ordering in ordered_metadata
+  cluster_rows = TRUE,
+  show_colnames = TRUE,
+  show_rownames = TRUE,
+  color = colorRampPalette(c("#457b9d", "#f1faee", "#e63946"))(100),
+  main = "Cardiac Maturation Marker Expression (Z-score)"
+)
+dev.off()
+
+# Correlating patient expression with GAA repeat length (LA and UA)
+patient_meta <- metadata |> dplyr::filter(condition == "Patient")
+patient_counts <- counts[markers_present, patient_meta$sample_id, drop = FALSE]
+
+cat("Analyzing correlations for", nrow(patient_meta), "patient samples\n")
+# 53 patient samples
+
+cor_results <- list()
+for (gene in markers_present) {
+  gene_expr <- patient_counts[gene, ]
+
+  # Pearson correlation
+  p_la <- cor(gene_expr, patient_meta$LA, method = "pearson", use = "complete.obs")
+  p_ua <- cor(gene_expr, patient_meta$UA, method = "pearson", use = "complete.obs")
+
+  p_val_la <- cor.test(gene_expr, patient_meta$LA, method = "pearson")$p.value
+  p_val_ua <- cor.test(gene_expr, patient_meta$UA, method = "pearson")$p.value
+
+  cor_results[[gene]] <- data.frame(
+    Gene = gene,
+    Pearson_LA = p_la,
+    Pearson_UA = p_ua,
+    Pvalue_LA = p_val_la,
+    Pvalue_UA = p_val_ua
+  )
+}
+
+cor_df <- bind_rows(cor_results)
+cor_csv_file <- file.path(marker_analysis_dir, "marker_GAA_correlations.csv")
+write.csv(cor_df, cor_csv_file, row.names = FALSE)
+
+# Plot correlation heatmap
+cor_matrix <- cor_df |> 
+  dplyr::select(Pearson_LA, Pearson_UA) |> 
+  as.matrix()
+rownames(cor_matrix) <- cor_df$Gene
+
+cor_heatmap_file <- file.path(marker_analysis_dir, "marker_GAA_correlation_heatmap.png")
+png(cor_heatmap_file, width = (fig_width - 1) * fig_dpi, height = fig_height * fig_dpi, res = fig_dpi)
+pheatmap(
+  cor_matrix,
+  cluster_cols = FALSE,
+  cluster_rows = TRUE,
+  angle_col = 0,
+  color = colorRampPalette(c("#1d3557", "#f1faee", "#e63946"))(100),
+  main = "Correlation of Markers with GAA Repeat Lengths (Patients)"
+)
+dev.off()
+
+write.csv(installed.packages(), "environment/R_packages.csv")
+yaml::write_yaml(devtools::session_info(), "environment/sessionInfo.yaml")
