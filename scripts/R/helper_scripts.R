@@ -1,6 +1,17 @@
 # Load config files
 library(yaml)
 
+path_config <- yaml::read_yaml("config/paths.yaml")
+qc_dir <- path_config$qc
+pca_blinded_to_design <- path_config$pca$blind_to_design
+pca_design_batch_effect_removed <- path_config$pca$design_and_batch_effect_removed
+marker_analysis_dir <- path_config$day_specific_marker_analysis
+
+dir_names <- c(qc_dir, pca_blinded_to_design, pca_design_batch_effect_removed, marker_analysis_dir)
+lapply(dir_names, function(dir_names){
+  dir.create(dir_names, recursive = TRUE, showWarnings = FALSE)
+})
+
 plotting_config <- yaml::read_yaml("config/plotting.yaml")
 fig_width <- plotting_config$figure_width
 fig_height <- plotting_config$figure_height
