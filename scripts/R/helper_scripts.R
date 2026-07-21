@@ -67,7 +67,7 @@ color_palettes <- list(
 )
 
 # Custom theme
-theme_premium <- function() {
+theme_custom <- function() {
   theme_minimal(base_size = 12, base_family = "Arial") +
     theme(
       plot.title = element_text(face = "bold", size = 14, hjust = 0.5, margin = margin(b = 10)),
@@ -84,71 +84,74 @@ theme_premium <- function() {
 }
 
 # Plot: PCA
-plot_and_save_pca <- function(expr_matrix, metadata, top_n = pca_ntop, color_by, shape_by, palettes, title, pca_output_dir, filename) {
-    suppressPackageStartupMessages({
-        library(ggplot2)
-        library(matrixStats)
-    })
-
-    expr_matrix <- as.matrix(expr_matrix)
-    metadata <- metadata[colnames(expr_matrix), , drop = FALSE]
-    topVarGenes <- order(matrixStats::rowVars(expr_matrix), decreasing = TRUE)[seq_len(top_n)]
-    
-    pca_res <- prcomp(t(expr_matrix[topVarGenes, ]))
-    percent_var <- pca_res$sdev^2 / sum(pca_res$sdev^2)
-    
-    pca_data <- data.frame(
-        Sample = colnames(expr_matrix),
-        PC1 = pca_res$x[, 1],
-        PC2 = pca_res$x[, 2],
-        Color = metadata[[color_by]]
-    )
-    
-    if (!is.null(shape_by)) {
-        pca_data$Shape <- metadata[[shape_by]]
-    }
-    
-    pca_data <- na.omit(pca_data)
+plot_and_save_pca <- function(expr_matrix, metadata, top_n = pca_ntop, 
+                                         color_by, shape_by = NULL, palettes, title, 
+                                         pca_output_dir, filename) {
   
-    counts <- table(pca_data$Color)
-    legend_labels <- paste0(names(palettes), " (n = ", counts[names(palettes)], ")")
-    names(legend_labels) <- names(palettes)
-    
-    p <- ggplot(pca_data, aes(x = PC1, y = PC2)) +
-         scale_color_manual(values = palettes, labels = legend_labels) +
-         labs(
-             title = title,
-             subtitle = paste0("Top ", top_n, " most variable genes (VST normalized)"),
-             x = paste0("PC1: ", round(percent_var[1] * 100, 1), "% variance"),
-             y = paste0("PC2: ", round(percent_var[2] * 100, 1), "% variance"),
-             color = tools::toTitleCase(color_by)
-         ) +
-         theme_premium()
+  suppressPackageStartupMessages({
+    library(ggplot2)
+    library(matrixStats)
+    library(plotly)
+    library(htmlwidgets)
+  })
   
-    if (!is.null(shape_by)) {
-      shape_counts <- table(pca_data$Shape)
-      unique_shapes <- names(shape_counts)
-
-      shape_labels <- paste0(unique_shapes, " (n = ", shape_counts[unique_shapes], ")")
-      names(shape_labels) <- unique_shapes
-
-      p <- p + 
-        geom_point(aes(color = Color, shape = Shape), size = 3, alpha = 0.8) +
-        scale_shape_manual(values = 15:(15 + length(unique_shapes) - 1), labels = shape_labels) +
-        labs(shape = tools::toTitleCase(shape_by))
-    } else {
-      p <- p + 
-        geom_point(aes(color = Color), size = 3, alpha = 0.8)
-    }
-      
-    ggsave(
-      filename = file.path(pca_output_dir, filename),
-      plot = p,
-      width = fig_width,
-      height = fig_height,
-      dpi = fig_dpi
-    )
-    cat("Saved PCA plot to:", file.path(pca_output_dir, filename), "\n")
+  expr_matrix <- as.matrix(expr_matrix)
+  metadata <- metadata[colnames(expr_matrix), , drop = FALSE]
+  
+  topVarGenes <- order(matrixStats::rowVars(expr_matrix), decreasing = TRUE)[seq_len(top_n)]
+  pca_res <- prcomp(t(expr_matrix[topVarGenes, ]))
+  percent_var <- pca_res$sdev^2 / sum(pca_res$sdev^2)
+  
+  pca_data <- data.frame(
+    Sample = colnames(expr_matrix),
+    PC1 = pca_res$x[, 1],
+    PC2 = pca_res$x[, 2],
+    Color = metadata[[color_by]]
+  )
+  
+  if (!is.null(shape_by)) {
+    pca_data$Shape <- metadata[[shape_by]]
+  }
+  
+  pca_data <- na.omit(pca_data)
+  
+  counts <- table(pca_data$Color)
+  legend_labels <- paste0(names(palettes), " (n = ", counts[names(palettes)], ")")
+  names(legend_labels) <- names(palettes)
+  
+  if (!is.null(shape_by)) {
+    shape_counts <- table(pca_data$Shape)
+    unique_shapes <- names(shape_counts)
+    shape_labels <- paste0(unique_shapes, " (n = ", shape_counts[unique_shapes], ")")
+    names(shape_labels) <- unique_shapes
     
-    return(p)
+    p <- ggplot(pca_data, aes(x = PC1, y = PC2, color = Color, shape = Shape, label = Sample)) +
+      geom_point(size = 3, alpha = 0.8) +
+      scale_shape_manual(values = 15:(15 + length(unique_shapes) - 1), labels = shape_labels) +
+      labs(shape = tools::toTitleCase(shape_by))
+  } else {
+    p <- ggplot(pca_data, aes(x = PC1, y = PC2, color = Color, label = Sample)) +
+      geom_point(size = 3, alpha = 0.8)
+  }
+  
+  p <- p + 
+    scale_color_manual(values = palettes, labels = legend_labels) +
+    labs(
+      title = title,
+      subtitle = paste0("Top ", top_n, " most variable genes (VST normalized)"),
+      x = paste0("PC1: ", round(percent_var[1] * 100, 1), "% variance"),
+      y = paste0("PC2: ", round(percent_var[2] * 100, 1), "% variance"),
+      color = tools::toTitleCase(color_by)
+    ) + 
+    theme_custom()
+  
+  p_interactive <- ggplotly(p, tooltip = c("label", "x", "y", "color", "shape"))
+  
+  full_path <- file.path(pca_output_dir, filename)
+  
+  htmlwidgets::saveWidget(p_interactive, file = paste0(full_path, ".html"), selfcontained = TRUE)
+  ggsave(filename = paste0(full_path, ".png"), plot = p, width = fig_width, height = fig_height, dpi = fig_dpi)
+  
+  cat("Saved PCA plot to:", full_path, "\n")
+  return(p_interactive)
 }

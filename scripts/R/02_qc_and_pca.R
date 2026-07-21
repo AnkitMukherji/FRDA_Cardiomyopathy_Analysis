@@ -65,7 +65,7 @@ all_plots <- lapply(cols, function(col_name) {
         palettes = color_palettes[[col_name]],
         title = paste("PCA Coloured by", clean_title_name),
         pca_output_dir = pca_blinded_to_design,
-        filename = paste0("pca_", col_name, ".png")
+        filename = paste0("pca_", col_name)
     )
 })
 
@@ -78,7 +78,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Batch",
     pca_output_dir = pca_blinded_to_design,
-    filename = "pca_cardiac_phenotype_batch.png"
+    filename = "pca_cardiac_phenotype_batch"
 )
 
 # PCA colour by phenotype and shape by day
@@ -90,7 +90,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Day",
     pca_output_dir = pca_blinded_to_design,
-    filename = "pca_cardiac_phenotype_day.png"
+    filename = "pca_cardiac_phenotype_day"
 )
 
 # 2. Batch-corrected VST PCA (blind = FALSE) with design = ~ Batch + Sex + Day + Condition
@@ -128,7 +128,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Batch",
     pca_output_dir = pca_design_batch_effect_removed,
-    filename = "pca_cardiac_phenotype_batch.png"
+    filename = "pca_cardiac_phenotype_batch"
 )
 
 # PCA colour by phenotype and shape by day
@@ -140,7 +140,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Day",
     pca_output_dir = pca_design_batch_effect_removed,
-    filename = "pca_cardiac_phenotype_day.png"
+    filename = "pca_cardiac_phenotype_day"
 )
 
 # Sample-to-Sample Correlation Heatmap using batch-effect corrected counts
@@ -214,7 +214,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Batch",
     pca_output_dir = pca_design_batch_effect_removed,
-    filename = "pca_cardiac_phenotype_batch_samples_removed.png"
+    filename = "pca_cardiac_phenotype_batch_samples_removed"
 )
 
 # PCA colour by phenotype and shape by day
@@ -226,7 +226,7 @@ plot_and_save_pca(
     palettes = color_palettes$cardiac_phenotype,
     title = "PCA Coloured by Cardiac Phenotype shape Day",
     pca_output_dir = pca_design_batch_effect_removed,
-    filename = "pca_cardiac_phenotype_day_samples_removed.png"
+    filename = "pca_cardiac_phenotype_day_samples_removed"
 )
 
 # Sample-to-Sample Correlation Heatmap using batch-effect corrected counts
@@ -272,13 +272,13 @@ processed_data$filtered_counts_batch_effect_corrected <- mat
 processed_data$filtered_counts_batch_effect_corrected_samples_removed <- mat_samples_removed
 processed_data$metadata_samples_removed <- metadata_samples_removed
 
-saveRDS(processed_data, "data/processed_data.rds")
+saveRDS(processed_data, "data/processed_data_batch_effect_corrected_qced_samples.rds")
 
 long_names <- names(processed_data)
 short_names <- substr(long_names, 1, 28)
 final_names <- make.unique(short_names, sep = ".")
 names(processed_data) <- substr(final_names, 1, 31)
-write.xlsx(processed_data, file = "data/processed_data_output.xlsx", rowNames = TRUE)
+write.xlsx(processed_data, file = "data/processed_data_batch_effect_corrected_qced_samples.xlsx", rowNames = TRUE)
 
 write.csv(installed.packages(), "environment/R_packages.csv")
 yaml::write_yaml(devtools::session_info(), "environment/sessionInfo.yaml")
