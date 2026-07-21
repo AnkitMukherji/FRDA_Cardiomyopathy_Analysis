@@ -188,14 +188,14 @@ mapping_metrics <- read_excel(
 metadata_samples_to_keep_col_add <- metadata |> 
   rownames_to_column(var = "row_names_temp") |> 
   left_join(
-    mapping_metrics |> select(Sample, `Samples to exclude`), 
+    mapping_metrics |> select(Sample, `Samples to include`), 
     join_by("sample_id" == "Sample")) |> 
   column_to_rownames(var = "row_names_temp")
 
-samples_to_exclude <- mapping_metrics$Sample[mapping_metrics$`Samples to exclude` == "No"]
+samples_to_include <- mapping_metrics$Sample[mapping_metrics$`Samples to include` == "No"]
 # 12 samples to exclude
-filtered_counts_samples_removed <- filtered_counts[, !colnames(filtered_counts) %in% samples_to_exclude]
-metadata_samples_removed <- metadata[!metadata$sample_id %in% samples_to_exclude, ]
+filtered_counts_samples_removed <- filtered_counts[, !colnames(filtered_counts) %in% samples_to_include]
+metadata_samples_removed <- metadata[!metadata$sample_id %in% samples_to_include, ]
 
 # QC on the filtered samples
 dds <- DESeqDataSetFromMatrix(
