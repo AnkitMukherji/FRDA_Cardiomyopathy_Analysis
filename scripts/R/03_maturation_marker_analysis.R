@@ -16,7 +16,9 @@ library(yaml)
 # Load Processed Data and Config
 processed_data <- readRDS("data/processed_data_batch_effect_corrected_qced_samples.rds")
 counts <- processed_data$filtered_counts_batch_effect_corrected
+counts_samples_removed <- processed_data$filtered_counts_batch_effect_corrected_samples_removed
 metadata <- processed_data$metadata
+metadata_samples_removed <- processed_data$metadata_samples_removed
 
 # Cardiac maturation and identity markers
 markers <- c(
@@ -42,18 +44,18 @@ markers <- c(
   "NPPA", "NPPB"
 )
 
-markers_present <- markers[markers %in% rownames(counts)] |> unique()
+markers_present <- markers[markers %in% rownames(counts_samples_removed)] |> unique()
 # OCT4 absent
 # Brachyury, a transcription factor 
 # encoded by Gene TBXT is filtered out due to low counts
 cat("Defined", length(unique(markers)), "markers. Present in dataset:", length(unique(markers_present)), "\n")
 # Total 25 markers out of 27 defined are present in the dataset
 
-marker_exp <- counts[markers_present, , drop = FALSE]
+marker_exp <- counts_samples_removed[markers_present, , drop = FALSE]
 marker_df <- as.data.frame(marker_exp) |> 
   rownames_to_column("Gene") |> 
   pivot_longer(-Gene, names_to = "sample_id", values_to = "Expression") |> 
-  left_join(metadata, by = "sample_id")
+  left_join(metadata_samples_removed, by = "sample_id")
 
 # Boxplot of marker genes between cardiac phenotypes stratified by day
 p_box <- ggplot(marker_df, aes(x = day, y = Expression, fill = cardiac_phenotype)) +
@@ -122,11 +124,11 @@ pheatmap(
 dev.off()
 
 # Correlating patient expression with GAA repeat length (LA and UA)
-patient_meta_day15 <- metadata |> dplyr::filter(condition == "Patient", day == "D15")
-patient_counts_day15 <- counts[markers_present, patient_meta_day15$sample_id, drop = FALSE]
+patient_meta_day15 <- metadata_samples_removed |> dplyr::filter(condition == "Patient", day == "D15")
+patient_counts_day15 <- counts_samples_removed[markers_present, patient_meta_day15$sample_id, drop = FALSE]
 
-patient_meta_day52 <- metadata |> dplyr::filter(condition == "Patient", day == "D52")
-patient_counts_day52 <- counts[markers_present, patient_meta_day52$sample_id, drop = FALSE]
+patient_meta_day52 <- metadata_samples_removed |> dplyr::filter(condition == "Patient", day == "D52")
+patient_counts_day52 <- counts_samples_removed[markers_present, patient_meta_day52$sample_id, drop = FALSE]
 
 cat("Analyzing correlations for", nrow(patient_meta_day15), "Day 15 patient samples and", nrow(patient_meta_day52), "Day 52 patient samples\n")
 # 37 Day 15 patient samples
