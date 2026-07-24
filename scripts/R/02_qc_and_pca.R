@@ -281,6 +281,7 @@ dev.off()
 processed_data$metadata <- metadata_samples_to_keep_col_add
 processed_data$filtered_counts <- filtered_counts
 processed_data$filtered_counts_batch_effect_corrected <- mat
+processed_data$filtered_counts_samples_removed <- filtered_counts_samples_removed
 processed_data$filtered_counts_batch_effect_corrected_samples_removed <- mat_samples_removed
 processed_data$metadata_samples_removed <- metadata_samples_removed
 
