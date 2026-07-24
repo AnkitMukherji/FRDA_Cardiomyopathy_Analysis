@@ -157,22 +157,23 @@ annotation_df <- data.frame(
 annotation_colors <- list(
     Phenotype = color_palettes$cardiac_phenotype,
     Timepoint = color_palettes$day,
-    Batch = color_palettes$sequencing_batch
+    Batch = color_palettes$sequencing_batch,
+    Condition = color_palettes$condition
 )
 
 heatmap_file <- file.path(qc_dir, "sample_correlation_heatmap_batch_effect_corrected.png")
 png(
     heatmap_file, 
-    width = fig_width * fig_dpi, 
-    height = (fig_height + 1) * fig_dpi,
+    width = (fig_width + 12) * fig_dpi, 
+    height = (fig_height + 12) * fig_dpi,
     res = fig_dpi
 )
 pheatmap(
     sample_cor,
     annotation_col = annotation_df,
     annotation_colors = annotation_colors,
-    show_rownames = FALSE,
-    show_colnames = FALSE,
+    show_rownames = TRUE,
+    show_colnames = TRUE,
     clustering_distance_rows = "correlation",
     clustering_distance_cols = "correlation",
     color = colorRampPalette(c("#457b9d", "#f1faee", "#e63946"))(100),
@@ -192,10 +193,12 @@ metadata_samples_to_keep_col_add <- metadata |>
     join_by("sample_id" == "Sample")) |> 
   column_to_rownames(var = "row_names_temp")
 
-samples_to_include <- mapping_metrics$Sample[mapping_metrics$`Samples to include` == "No"]
+samples_to_exclude <- mapping_metrics$Sample[mapping_metrics$`Samples to include` == "No"]
+# or
+samples_to_exclude <- mapping_metrics$Sample[mapping_metrics$`Properly paired reads %` < 80 | mapping_metrics$`Million exonic reads` <= 5]
 # 12 samples to exclude
-filtered_counts_samples_removed <- filtered_counts[, !colnames(filtered_counts) %in% samples_to_include]
-metadata_samples_removed <- metadata[!metadata$sample_id %in% samples_to_include, ]
+filtered_counts_samples_removed <- filtered_counts[, !colnames(filtered_counts) %in% samples_to_exclude]
+metadata_samples_removed <- metadata[!metadata$sample_id %in% samples_to_exclude, ]
 
 # QC on the filtered samples
 dds <- DESeqDataSetFromMatrix(
@@ -250,22 +253,23 @@ annotation_df <- data.frame(
 annotation_colors <- list(
     Phenotype = color_palettes$cardiac_phenotype,
     Timepoint = color_palettes$day,
-    Batch = color_palettes$sequencing_batch
+    Batch = color_palettes$sequencing_batch,
+    Condition = color_palettes$condition
 )
 
 heatmap_file <- file.path(qc_dir, "sample_correlation_heatmap_batch_effect_corrected_samples_removed.png")
 png(
     heatmap_file, 
-    width = fig_width * fig_dpi, 
-    height = (fig_height + 1) * fig_dpi,
+    width = (fig_width + 12) * fig_dpi, 
+    height = (fig_height + 12) * fig_dpi,
     res = fig_dpi
 )
 pheatmap(
     sample_cor,
     annotation_col = annotation_df,
     annotation_colors = annotation_colors,
-    show_rownames = FALSE,
-    show_colnames = FALSE,
+    show_rownames = TRUE,
+    show_colnames = TRUE,
     clustering_distance_rows = "correlation",
     clustering_distance_cols = "correlation",
     color = colorRampPalette(c("#457b9d", "#f1faee", "#e63946"))(100),
