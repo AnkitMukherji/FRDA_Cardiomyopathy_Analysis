@@ -122,29 +122,47 @@ pheatmap(
 dev.off()
 
 # Correlating patient expression with GAA repeat length (LA and UA)
-patient_meta <- metadata |> dplyr::filter(condition == "Patient")
-patient_counts <- counts[markers_present, patient_meta$sample_id, drop = FALSE]
+patient_meta_day15 <- metadata |> dplyr::filter(condition == "Patient", day == "D15")
+patient_counts_day15 <- counts[markers_present, patient_meta_day15$sample_id, drop = FALSE]
 
-cat("Analyzing correlations for", nrow(patient_meta), "patient samples\n")
+patient_meta_day52 <- metadata |> dplyr::filter(condition == "Patient", day == "D52")
+patient_counts_day52 <- counts[markers_present, patient_meta_day52$sample_id, drop = FALSE]
+
+cat("Analyzing correlations for", nrow(patient_meta_day15), "Day 15 patient samples and", nrow(patient_meta_day52), "Day 52 patient samples\n")
+# 37 Day 15 patient samples
+# 16 Day 52 patient samples
 # 53 patient samples
 
 cor_results <- list()
 for (gene in markers_present) {
-  gene_expr <- patient_counts[gene, ]
+  gene_expr_day15 <- patient_counts_day15[gene, ]
+  gene_expr_day52 <- patient_counts_day52[gene, ]
 
   # Pearson correlation
-  p_la <- cor(gene_expr, patient_meta$LA, method = "pearson", use = "complete.obs")
-  p_ua <- cor(gene_expr, patient_meta$UA, method = "pearson", use = "complete.obs")
+  # Day 15
+  p_la_15 <- cor(gene_expr_day15, patient_meta_day15$LA, method = "pearson", use = "complete.obs")
+  p_ua_15 <- cor(gene_expr_day15, patient_meta_day15$UA, method = "pearson", use = "complete.obs")
 
-  p_val_la <- cor.test(gene_expr, patient_meta$LA, method = "pearson")$p.value
-  p_val_ua <- cor.test(gene_expr, patient_meta$UA, method = "pearson")$p.value
+  p_val_la_15 <- cor.test(gene_expr_day15, patient_meta_day15$LA, method = "pearson")$p.value
+  p_val_ua_15 <- cor.test(gene_expr_day15, patient_meta_day15$UA, method = "pearson")$p.value
+
+  # Day 52
+  p_la_52 <- cor(gene_expr_day52, patient_meta_day52$LA, method = "pearson", use = "complete.obs")
+  p_ua_52 <- cor(gene_expr_day52, patient_meta_day52$UA, method = "pearson", use = "complete.obs")
+
+  p_val_la_52 <- cor.test(gene_expr_day52, patient_meta_day52$LA, method = "pearson")$p.value
+  p_val_ua_52 <- cor.test(gene_expr_day52, patient_meta_day52$UA, method = "pearson")$p.value
 
   cor_results[[gene]] <- data.frame(
     Gene = gene,
-    Pearson_LA = p_la,
-    Pearson_UA = p_ua,
-    Pvalue_LA = p_val_la,
-    Pvalue_UA = p_val_ua
+    Pearson_LA_D15 = p_la_15,
+    Pearson_UA_D15 = p_ua_15,
+    Pvalue_LA_D15 = p_val_la_15,
+    Pvalue_UA_D15 = p_val_ua_15,
+    Pearson_LA_D52 = p_la_52,
+    Pearson_UA_D52 = p_ua_52,
+    Pvalue_LA_D52 = p_val_la_52,
+    Pvalue_UA_D52 = p_val_ua_52
   )
 }
 
@@ -154,7 +172,7 @@ write.csv(cor_df, cor_csv_file, row.names = FALSE)
 
 # Plot correlation heatmap
 cor_matrix <- cor_df |> 
-  dplyr::select(Pearson_LA, Pearson_UA) |> 
+  dplyr::select(Pearson_LA_D15, Pearson_UA_D15, Pearson_LA_D52, Pearson_UA_D52) |> 
   as.matrix()
 rownames(cor_matrix) <- cor_df$Gene
 
@@ -165,6 +183,7 @@ pheatmap(
   cluster_cols = FALSE,
   cluster_rows = TRUE,
   angle_col = 0,
+  fontsize_col = 8,
   color = colorRampPalette(c("#1d3557", "#f1faee", "#e63946"))(100),
   main = "Correlation of Markers with GAA Repeat Lengths (Patients)"
 )
