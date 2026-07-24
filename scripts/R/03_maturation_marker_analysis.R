@@ -9,7 +9,9 @@ source("scripts/R/helper_scripts.R")
 
 library(DESeq2)
 library(ggplot2)
+library(openxlsx)
 library(pheatmap)
+library(rstatix)
 library(tidyverse)
 library(yaml)
 
@@ -56,6 +58,34 @@ marker_df <- as.data.frame(marker_exp) |>
   rownames_to_column("Gene") |> 
   pivot_longer(-Gene, names_to = "sample_id", values_to = "Expression") |> 
   left_join(metadata_samples_removed, by = "sample_id")
+
+# Comparing expression level of marker genes between cardiac phenotypes within and between day 15 and day 52
+# Using Wilcoxon test for comparison. Reasons:
+# t-test is sensitive to outliers
+# Sample size is less to follow the CLT
+# Gene expression data rarely follows a bell-curve normal distribution
+stat_df <- marker_df |> 
+  mutate(group_comb = paste(day, cardiac_phenotype, "_"))
+
+stats_within_days <- stat_df |> 
+  group_by(Gene, day) |> 
+  wilcox_test(Expression ~ cardiac_phenotype) |> 
+  adjust_pvalue(method = "BH") |> 
+  add_significance() |> 
+  mutate(comparison_type = paste0("Within Day Phenotype Comparison Between ", day))
+
+stats_across_days <- stat_df %>%
+  group_by(Gene, cardiac_phenotype) %>%
+  wilcox_test(Expression ~ day) %>%
+  adjust_pvalue(method = "BH") %>%
+  add_significance() %>%
+  mutate(comparison_type = paste("Across Days Timepoint Comparison for ", cardiac_phenotype))
+
+combined_stats <- bind_rows(stats_within_days, stats_across_days) %>%
+  select(Gene, comparison_type, group1, group2, n1, n2, statistic, p, p.adj, p.adj.signif)
+
+comparison_file <- file.path(marker_analysis_dir, "marker_genes_significance_tests.xlsx")
+write.xlsx(combined_stats, file = comparison_file)
 
 # Boxplot of marker genes between cardiac phenotypes stratified by day
 p_box <- ggplot(marker_df, aes(x = day, y = Expression, fill = cardiac_phenotype)) +

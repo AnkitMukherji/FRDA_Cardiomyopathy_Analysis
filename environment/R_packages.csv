@@ -1,11 +1,21 @@
 "","Package","LibPath","Version","Priority","Depends","Imports","LinkingTo","Suggests","Enhances","License","License_is_FOSS","License_restricts_use","OS_type","MD5sum","NeedsCompilation","Built","Published"
 "abind","abind","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4-8",NA,"R (>= 1.5.0)","methods, utils",NA,NA,NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:41:32 UTC; windows",NA
+"aisdk","aisdk","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.12",NA,"R (>= 4.1.0)","R6, httr2, jsonlite, rlang, yaml, callr, processx, memoise,
+digest, parallel, stats, tools, utils, methods, base64enc, curl",NA,"testthat (>= 3.0.0), httptest2, cli, skimr, evaluate,
+ggplot2, dplyr, readr, readxl, DBI, RSQLite, rstudioapi, DT,
+withr, devtools, fs, dotenv, pkgload",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:37:22 UTC; windows",NA
 "AnnotationDbi","AnnotationDbi","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.74.0",NA,"R (>= 2.7.0), methods, stats4, BiocGenerics (>= 0.29.2),
 Biobase (>= 1.17.0), IRanges","DBI, RSQLite, S4Vectors (>= 0.9.25), stats, KEGGREST",NA,"utils, hgu95av2.db, GO.db, org.Sc.sgd.db, org.At.tair.db,
 RUnit, TxDb.Hsapiens.UCSC.hg19.knownGene, org.Hs.eg.db,
 reactome.db, AnnotationForge, graph, EnsDb.Hsapiens.v75,
 BiocStyle, knitr",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-05-29 06:40:05 UTC; windows",NA
+"ape","ape","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","5.8-1",NA,"R (>= 3.2.0)","nlme, lattice, graphics, methods, stats, utils, parallel, Rcpp
+(>= 0.12.0), digest","Rcpp","gee, expm, igraph, phangorn, xml2",NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:10:59 UTC; windows",NA
+"aplot","aplot","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.1",NA,"R (>= 4.1.0)","ggfun (>= 0.1.3), gtable, ggplot2, ggplotify, patchwork,
+magrittr, methods, utils, yulab.utils (>= 0.1.9), pillar",NA,"ggtree, testthat (>= 3.0.0)",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:29:55 UTC; windows",NA
 "askpass","askpass","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.1",NA,NA,"sys (>= 2.1)",NA,"testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:58:20 UTC; windows",NA
+"assertthat","assertthat","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.1",NA,NA,"tools",NA,"testthat, covr",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:02:21 UTC; windows",NA
+"babelgene","babelgene","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","22.9",NA,"R (>= 3.4)","dplyr, methods, rlang",NA,"covr, knitr, rmarkdown, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:18:12 UTC; windows",NA
 "backports","backports","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.1",NA,"R (>= 3.0.0)",NA,NA,NA,NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:41:08 UTC; windows",NA
 "base64enc","base64enc","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1-6",NA,"R (>= 2.9.0)",NA,NA,NA,"png","GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:40:54 UTC; windows",NA
 "BH","BH","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.90.0-1",NA,NA,NA,NA,NA,NA,"BSL-1.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:41:53 UTC; windows",NA
@@ -61,6 +71,12 @@ knitr, lattice, magrittr, rappdirs, rmarkdown (>= 2.7), shiny
 "callr","callr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.8.0",NA,"R (>= 3.4)","otel (>= 0.2.0), processx (>= 3.6.1), R6, utils",NA,"asciicast (>= 2.3.1), carrier, cli (>= 1.1.0), otelsdk (>=
 0.2.0), ps, rprojroot, spelling, testthat (>= 3.2.0), withr (>=
 2.3.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:15:55 UTC; windows",NA
+"car","car","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.1-5",NA,"R (>= 3.5.0), carData (>= 3.0-0)","abind, Formula, MASS, mgcv, nnet, pbkrtest (>= 0.4-4),
+quantreg, grDevices, utils, stats, graphics, lme4 (>=
+1.1-27.1), nlme, scales",NA,"alr4, boot, coxme, effects, knitr, leaps, lmtest, Matrix,
+MatrixModels, ordinal, plotrix, mvtnorm, rgl (>= 0.111.3), rio,
+sandwich, SparseM, survival, survey",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 04:37:32 UTC; windows",NA
+"carData","carData","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.0-6",NA,"R (>= 3.5.0)",NA,NA,"car (>= 3.0-0)",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:02:02 UTC; windows",NA
 "cellranger","cellranger","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.1.0",NA,"R (>= 3.0.0)","rematch, tibble",NA,"covr, testthat (>= 1.0.0), knitr, rmarkdown",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 03:00:08 UTC; windows",NA
 "circlize","circlize","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.18",NA,"R (>= 4.0.0), graphics","GlobalOptions (>= 0.1.2), shape, grDevices, utils, stats,
 colorspace, methods, grid",NA,"knitr, dendextend (>= 1.0.1), ComplexHeatmap (>= 2.0.0),
@@ -73,6 +89,11 @@ rstudioapi, testthat (>= 3.2.0), tibble, whoami, withr",NA,"MIT + file LICENSE",
 2.0.0)",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 00:58:59 UTC; windows",NA
 "clue","clue","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3-68",NA,"R (>= 3.2.0)","stats, cluster, graphics, methods",NA,"e1071, lpSolve (>= 5.5.7), quadprog (>= 1.4-8), relations","RWeka, ape, cba, cclust, flexclust, flexmix, kernlab, mclust,
 movMF, modeltools","GPL-2",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:02:34 UTC; windows",NA
+"clusterProfiler","clusterProfiler","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.20.0",NA,"R (>= 4.2.0)","aisdk, AnnotationDbi, dplyr, enrichit (>= 0.1.1), enrichplot
+(>= 1.9.3), ggplot2, GO.db, GOSemSim (>= 2.27.2), gson (>=
+0.0.7), httr, igraph, jsonlite, magrittr, methods, plyr,
+qvalue, rlang, stats, tidyr, utils, yulab.utils (>= 0.2.3)",NA,"AnnotationHub, BiocManager, DOSE, ggtangle, readr,
+org.Hs.eg.db, quarto, testthat",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 14:44:01 UTC; windows",NA
 "colorspace","colorspace","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.1-3",NA,"R (>= 3.0.0), methods","graphics, grDevices, stats",NA,"datasets, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd,
 tcltk, shiny, shinyjs, ggplot2, dplyr, scales, grid, png, jpeg,
 knitr, rmarkdown, RColorBrewer, rcartocolor, scico, viridis,
@@ -86,6 +107,12 @@ grImport2, glue, GenomicRanges, gridtext, pheatmap (>= 1.0.12),
 gridGraphics, gplots, rmarkdown, Cairo, magick",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-05-01 09:32:49 UTC; windows",NA
 "conflicted","conflicted","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.0",NA,"R (>= 3.2)","cli (>= 3.4.0), memoise, rlang (>= 1.0.0)",NA,"callr, covr, dplyr, Matrix, methods, pkgload, testthat (>=
 3.0.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 02:36:19 UTC; windows",NA
+"corrplot","corrplot","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.95",NA,NA,NA,NA,"seriation, knitr, RColorBrewer, rmarkdown, magrittr,
+prettydoc, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:02:30 UTC; windows",NA
+"cowplot","cowplot","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.0",NA,"R (>= 3.5.0)","ggplot2 (>= 3.5.2), grid, gtable, grDevices, methods, rlang,
+scales",NA,"Cairo, covr, dplyr, forcats, gridGraphics (>= 0.4-0), knitr,
+lattice, magick, maps, PASWR, patchwork, rmarkdown, ragg,
+testthat (>= 1.0.0), tidyr, vdiffr (>= 0.3.0), VennDiagram",NA,"GPL-2",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:50:48 UTC; windows",NA
 "cpp11","cpp11","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.5",NA,"R (>= 4.0.0)",NA,NA,"bench, brio, callr, cli, covr, decor, desc, ggplot2, glue,
 knitr, lobstr, mockery, progress, rmarkdown, scales, Rcpp,
 testthat (>= 3.2.0), tibble, utils, vctrs, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:14 UTC; windows",NA
@@ -115,6 +142,7 @@ IRanges (>= 2.17.3), S4Arrays (>= 1.9.3), SparseArray (>=
 1.7.5)","stats",NA,"BiocParallel, HDF5Array (>= 1.17.12), ZarrArray, genefilter,
 SummarizedExperiment, airway, lobstr, DelayedMatrixStats,
 knitr, rmarkdown, BiocStyle, RUnit",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-05-26 21:59:34 UTC; windows",NA
+"Deriv","Deriv","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.3.0",NA,"Rcpp","methods","Rcpp","testthat (>= 0.11.0)",NA,"GPL (>= 3)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-24 11:45:11 UTC; windows",NA
 "desc","desc","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.3",NA,"R (>= 3.4)","cli, R6, utils",NA,"callr, covr, gh, spelling, testthat, whoami, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:00:07 UTC; windows",NA
 "DESeq2","DESeq2","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.52.0",NA,"S4Vectors (>= 0.23.18), IRanges, GenomicRanges,
 SummarizedExperiment (>= 1.1.6)","BiocGenerics (>= 0.7.5), Biobase, BiocParallel, matrixStats,
@@ -135,8 +163,15 @@ curl (>= 4.3.2), digest (>= 0.6.29), DT (>= 0.23), foghorn (>=
 (>= 2.14), rstudioapi (>= 0.13), spelling (>= 2.2), xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 03:35:32 UTC; windows",NA
 "diffobj","diffobj","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.6",NA,"R (>= 3.1.0)","crayon (>= 1.3.2), tools, methods, utils, stats",NA,"knitr, rmarkdown",NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 01:00:41 UTC; windows",NA
 "digest","digest","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.6.39",NA,"R (>= 3.3.0)","utils",NA,"tinytest, simplermarkdown, rbenchmark",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:14 UTC; windows",NA
+"doBy","doBy","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.7.2",NA,"R (>= 4.2.0), methods","boot, broom, cowplot, Deriv, dplyr, forecast, ggplot2, MASS,
+Matrix, modelr, rlang, purrr, tibble, tidyr,",NA,"geepack, knitr, lme4, markdown, rmarkdown, multcomp,
+microbenchmark, pbkrtest (>= 0.5.2), survival, testthat (>=
+2.1.0)",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 04:33:54 UTC; windows",NA
 "doParallel","doParallel","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.17",NA,"R (>= 2.14.0), foreach (>= 1.2.0), iterators (>= 1.0.0),
 parallel, utils",NA,NA,"caret, mlbench, rpart, RUnit","compiler","GPL-2",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:18:17 UTC; windows",NA
+"DOSE","DOSE","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.6.0",NA,"R (>= 3.5.0)","AnnotationDbi, enrichit (>= 0.0.4), ggplot2, GOSemSim (>=
+2.37.1), methods, reshape2, utils, yulab.utils (> 0.2.2)",NA,"prettydoc, clusterProfiler, gson (>= 0.0.5), knitr, memoise,
+org.Hs.eg.db, rmarkdown, testthat",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-24 08:48:04 UTC; windows",NA
 "downlit","downlit","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.5",NA,"R (>= 4.0.0)","brio, desc, digest, evaluate, fansi, memoise, rlang, vctrs,
 withr, yaml",NA,"covr, htmltools, jsonlite, MASS, MassSpecWavelet, pkgload,
 rmarkdown, testthat (>= 3.0.0), xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:35:34 UTC; windows",NA
@@ -153,6 +188,17 @@ glue, lifecycle, rlang (>= 1.0.4), tibble, tidyselect (>=
 "ellipsis","ellipsis","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.3",NA,"R (>= 3.2)","rlang (>= 1.1.7)",NA,"covr, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:02:27 UTC; windows",NA
 "EnhancedVolcano","EnhancedVolcano","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.30.0",NA,"ggplot2, ggrepel","methods, scales, grid, grDevices",NA,"RUnit, ggrastr, BiocGenerics, knitr, DESeq2, pasilla, airway,
 org.Hs.eg.db, gridExtra, magrittr, rmarkdown",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 15:14:28 UTC; windows",NA
+"enrichit","enrichit","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.0",NA,"R (>= 3.5.0)","Matrix, methods, Rcpp (>= 1.0.10), rlang, stats, yulab.utils
+(> 0.2.1)","Rcpp, RcppEigen","AnnotationDbi, BiasedUrn, clusterProfiler, DOSE, fgsea, gson,
+qvalue, testthat",NA,"Artistic-2.0",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:21:47 UTC; windows",NA
+"enrichplot","enrichplot","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.32.0",NA,"R (>= 4.2.0)","aplot (>= 0.2.1), DOSE, dplyr, enrichit, ggfun (>= 0.1.7),
+ggnewscale, ggplot2 (>= 3.5.0), ggrepel (>= 0.9.0), ggtangle
+(>= 0.0.9), ggtree, GOSemSim (>= 2.37.2), graphics, grid,
+igraph, methods, purrr, RColorBrewer, reshape2, rlang,
+scatterpie, stats, tidydr, utils, yulab.utils (>= 0.2.2)",NA,"AnnotationDbi, clusterProfiler, europepmc, ggarchery,
+ggforce, ggHoriPlot, ggplotify, ggridges, ggstar, ggtreeExtra,
+ggupset, glue, grDevices, gridExtra, gson, org.Hs.eg.db,
+quarto, scales, tibble, tidyr",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-24 08:48:12 UTC; windows",NA
 "evaluate","evaluate","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.5",NA,"R (>= 3.6.0)",NA,NA,"callr, covr, ggplot2 (>= 3.3.6), lattice, methods, pkgload,
 ragg (>= 1.4.0), rlang (>= 1.1.5), knitr, testthat (>= 3.0.0),
 withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 00:59:26 UTC; windows",NA
@@ -161,11 +207,20 @@ withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 00:59:26 
 "fastmap","fastmap","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.0",NA,NA,NA,NA,"testthat (>= 2.1.1)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:15 UTC; windows",NA
 "fontawesome","fontawesome","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.3",NA,"R (>= 3.3.0)","rlang (>= 1.0.6), htmltools (>= 0.5.1.1)",NA,"covr, dplyr (>= 1.0.8), gt (>= 0.9.0), knitr (>= 1.31),
 testthat (>= 3.0.0), rsvg",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:15:43 UTC; windows",NA
+"fontBitstreamVera","fontBitstreamVera","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.1",NA,"R (>= 3.0.0)",NA,NA,NA,NA,"file LICENCE","yes",NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:43:40 UTC; windows",NA
+"fontLiberation","fontLiberation","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.0",NA,"R (>= 3.0)",NA,NA,NA,NA,"file LICENSE","yes",NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:43:41 UTC; windows",NA
+"fontquiver","fontquiver","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.1",NA,"R (>= 3.0.0)","fontBitstreamVera (>= 0.1.0), fontLiberation (>= 0.1.0)",NA,"testthat, htmltools",NA,"GPL-3 | file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:03:27 UTC; windows",NA
 "forcats","forcats","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.1",NA,"R (>= 4.1)","cli (>= 3.4.0), glue, lifecycle, magrittr, rlang (>= 1.0.0),
 tibble",NA,"covr, dplyr, ggplot2, knitr, readr, rmarkdown, testthat (>=
 3.0.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 03:33:27 UTC; windows",NA
 "foreach","foreach","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.2",NA,"R (>= 2.5.0)","codetools, utils, iterators",NA,"randomForest, doMC, doParallel, testthat, knitr, rmarkdown",NA,"Apache License (== 2.0)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:58:29 UTC; windows",NA
+"forecast","forecast","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","9.0.2",NA,"R (>= 4.1.0)","colorspace, fracdiff, generics (>= 0.1.2), ggplot2 (>= 3.4.0),
+graphics, lmtest, magrittr, nnet, parallel, Rcpp (>= 0.12.4),
+stats, timeDate, urca, withr, zoo","Rcpp (>= 0.12.4), RcppArmadillo (>= 0.2.35)","forecTheta, knitr, methods, rmarkdown, rticles, scales,
+seasonal, testthat (>= 3.3.0), uroot",NA,"GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:50:49 UTC; windows",NA
 "formatR","formatR","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.14",NA,"R (>= 3.2.3)",NA,NA,"rstudioapi, shiny, testit, rmarkdown, knitr",NA,"GPL",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:05:29 UTC; windows",NA
+"Formula","Formula","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2-5",NA,"R (>= 2.0.0), stats",NA,NA,NA,NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:41:34 UTC; windows",NA
+"fracdiff","fracdiff","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5-4",NA,NA,"stats",NA,"longmemo, forecast, urca",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:02:03 UTC; windows",NA
 "fs","fs","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.1.0",NA,"R (>= 4.1)","methods",NA,"covr, crayon, knitr, pillar (>= 1.0.0), rmarkdown, spelling,
 testthat (>= 3.0.0), tibble (>= 1.1.0), vctrs (>= 0.3.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 00:58:57 UTC; windows",NA
 "futile.logger","futile.logger","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.9",NA,"R (>= 3.0.0)","utils, lambda.r (>= 1.1.0), futile.options",NA,"testit, jsonlite, httr, crayon, rsyslog, glue",NA,"LGPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:21:20 UTC; windows",NA
@@ -174,6 +229,8 @@ testthat (>= 3.0.0), tibble (>= 1.1.0), vctrs (>= 0.3.0), withr",NA,"MIT + file 
 1.4.5), jsonlite, lifecycle (>= 0.2.0), openssl, rappdirs,
 rlang (>= 1.1.0), stats, utils, withr",NA,"aws.ec2metadata, aws.signature, covr, httpuv, knitr,
 rmarkdown, sodium, spelling, testthat (>= 3.1.7)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 03:16:06 UTC; windows",NA
+"gdtools","gdtools","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.1",NA,"R (>= 4.0.0)","fontquiver (>= 0.2.0), htmltools, Rcpp (>= 0.12.12),
+systemfonts (>= 1.3.1), tools","Rcpp","curl, gfonts, methods, testthat",NA,"GPL-3 | file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:11:51 UTC; windows",NA
 "generics","generics","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.4",NA,"R (>= 3.6)","methods",NA,"covr, pkgload, testthat (>= 3.0.0), tibble, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:11 UTC; windows",NA
 "GenomicRanges","GenomicRanges","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.64.0",NA,"R (>= 4.0.0), methods, stats4, BiocGenerics (>= 0.53.2),
 S4Vectors (>= 0.45.2), IRanges (>= 2.43.6), Seqinfo (>= 0.99.3)","utils, stats",NA,"GenomeInfoDb, Biobase, AnnotationDbi, annotate, Biostrings
@@ -192,6 +249,19 @@ rmarkdown, BiocStyle",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 
 "gert","gert","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.3.1",NA,NA,"askpass, credentials (>= 1.2.1), openssl (>= 2.0.3),
 rstudioapi (>= 0.11), sys, zip (>= 2.1.0)",NA,"spelling, knitr, rmarkdown, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 02:36:08 UTC; windows",NA
 "GetoptLong","GetoptLong","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.1.1",NA,"R (>= 4.0.0)","rjson, GlobalOptions (>= 0.1.0), methods, crayon",NA,"testthat (>= 1.0.0), knitr, markdown, rmarkdown",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:13:47 UTC; windows",NA
+"ggforce","ggforce","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.0",NA,"ggplot2 (>= 3.5.0), R (>= 3.3.0)","grid, scales, MASS, tweenr (>= 0.1.5), gtable, rlang,
+polyclip, stats, grDevices, tidyselect, withr, utils,
+lifecycle, cli, vctrs, systemfonts","cpp11","sessioninfo, deldir, latex2exp, reshape2, units (>= 0.8.0),
+covr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:31:03 UTC; windows",NA
+"ggfun","ggfun","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.1",NA,"R (>= 4.2.0)","cli, dplyr, ggplot2, graphics, grid, rlang, scales, utils,
+yulab.utils (>= 0.1.6)",NA,"ggplotify, knitr, pkgload, quarto, testthat, tidyr,
+ggnewscale",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:09:33 UTC; windows",NA
+"ggiraph","ggiraph","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.9.6",NA,NA,"cli, dplyr, gdtools (>= 0.5.0), ggplot2 (>= 4.0.0), grid,
+htmltools, htmlwidgets (>= 1.5), MASS, purrr, Rcpp (>= 1.1.0),
+rlang, S7 (>= 0.2.0), stats, systemfonts (>= 1.3.1), vctrs","Rcpp, systemfonts","ggbeeswarm, ggrepel (>= 0.9.1), hexbin, knitr, maps,
+quantreg, rmarkdown, sf (>= 1.0), shiny, tinytest, xml2 (>=
+1.0)",NA,"GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 03:10:04 UTC; windows",NA
+"ggnewscale","ggnewscale","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.2",NA,NA,"ggplot2 (>= 3.5.0)",NA,"testthat, vdiffr, covr",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:51:33 UTC; windows",NA
 "ggplot2","ggplot2","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.0.3",NA,"R (>= 4.1)","cli, grDevices, grid, gtable (>= 0.3.6), isoband, lifecycle (>
 1.0.1), rlang (>= 1.1.0), S7, scales (>= 1.4.0), stats, vctrs
 (>= 0.6.0), withr (>= 2.5.0)",NA,"broom, covr, dplyr, ggplot2movies, hexbin, Hmisc, hms, knitr,
@@ -199,10 +269,24 @@ mapproj, maps, MASS, mgcv, multcomp, munsell, nlme, profvis,
 quantreg, quarto, ragg (>= 1.2.6), RColorBrewer, roxygen2,
 rpart, sf (>= 0.7-3), svglite (>= 2.1.2), testthat (>= 3.1.5),
 tibble, vdiffr (>= 1.0.6), xml2","sp","MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:38:19 UTC; windows",NA
+"ggplotify","ggplotify","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.3",NA,"R (>= 3.4.0)","ggplot2, graphics, grDevices, grid, gridGraphics, rlang,
+yulab.utils",NA,"aplot, colorspace, cowplot, ggimage, knitr, rmarkdown,
+lattice, prettydoc, vcd, utils",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:50:55 UTC; windows",NA
 "ggrepel","ggrepel","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.9.8",NA,"R (>= 4.1.0), ggplot2 (>= 3.5.2)","grid, Rcpp, rlang (>= 1.1.6), S7, scales (>= 1.4.0), withr (>=
 3.0.2)","Rcpp","knitr, rmarkdown, testthat, svglite, vdiffr, gridExtra, ggpp,
 patchwork, devtools, prettydoc, ggbeeswarm, dplyr, magrittr,
 readr, stringr, marquee, rsvg, sf",NA,"GPL-3 | file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 03:00:03 UTC; windows",NA
+"ggsci","ggsci","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","5.1.0",NA,"R (>= 3.5.0)","ggplot2 (>= 2.0.0), grDevices, rlang, scales",NA,"gridExtra, knitr, ragg, rmarkdown",NA,"GPL (>= 3)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:50:57 UTC; windows",NA
+"ggsignif","ggsignif","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.6.4",NA,NA,"ggplot2 (>= 3.3.5)",NA,"knitr, rmarkdown, testthat, vdiffr (>= 1.0.2)",NA,"GPL-3 | file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:50:57 UTC; windows",NA
+"ggtangle","ggtangle","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.2",NA,"R (>= 4.1.0)","ggfun (>= 0.1.7), ggplot2, ggrepel, igraph, rlang, yulab.utils
+(>= 0.2.2)",NA,"aplot, cli, ggiraph, ggnewscale, ggtree, quarto, scatterpie
+(>= 0.2.4)",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:28:28 UTC; windows",NA
+"ggtree","ggtree","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.2.0",NA,"R (>= 4.2.0)","ape, aplot, cli, dplyr, ggfun (>= 0.1.7), ggiraph (>= 0.9.1),
+ggplot2 (>= 4.0.0), grid, magrittr, methods, purrr, rlang,
+scales, stats, tidyr, tidytree (>= 0.4.5), treeio (>= 1.8.0),
+utils, yulab.utils (>= 0.2.3)",NA,"emojifont, ggimage, ggplotify, shadowtext, grDevices, knitr,
+prettydoc, rmarkdown, igraph, testthat, tibble, glue,
+Biostrings",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 13:02:14 UTC; windows",NA
 "gh","gh","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.6.0",NA,"R (>= 4.1)","cli (>= 3.0.1), gitcreds, glue, httr2 (>= 1.0.6), ini,
 jsonlite, lifecycle, rlang (>= 1.1.0)",NA,"connectcreds, covr, knitr, rmarkdown, rprojroot, spelling,
 testthat (>= 3.0.0), vctrs, webfakes (>= 1.5.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:36:08 UTC; windows",NA
@@ -212,6 +296,7 @@ testthat (>= 3.0.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ;
 "glue","glue","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.8.1",NA,"R (>= 4.1)","methods",NA,"crayon, DBI (>= 1.2.0), dplyr, knitr, rlang, rmarkdown,
 RSQLite, testthat (>= 3.2.0), vctrs (>= 0.3.0), waldo (>=
 0.5.3), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:13 UTC; windows",NA
+"GO.db","GO.db","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.23.1",NA,"R (>= 2.7.0), methods, AnnotationDbi (>= 1.73.0)",NA,NA,"DBI",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-24 08:47:11 UTC; windows",NA
 "googledrive","googledrive","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.1.2",NA,"R (>= 4.1)","cli (>= 3.0.0), gargle (>= 1.6.0), glue (>= 1.4.2), httr,
 jsonlite, lifecycle, magrittr, pillar (>= 1.9.0), purrr (>=
 1.0.1), rlang (>= 1.0.2), tibble (>= 2.0.0), utils, uuid, vctrs
@@ -221,6 +306,14 @@ jsonlite, lifecycle, magrittr, pillar (>= 1.9.0), purrr (>=
 1.3.0), googledrive (>= 2.1.0), httr, ids, lifecycle, magrittr,
 methods, purrr, rematch2, rlang (>= 1.0.2), tibble (>= 2.1.1),
 utils, vctrs (>= 0.2.3), withr",NA,"readr, rmarkdown, spelling, testthat (>= 3.1.7)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 03:57:02 UTC; windows",NA
+"GOSemSim","GOSemSim","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.38.3",NA,"R (>= 4.2.0)","AnnotationDbi, DBI, digest, GO.db, methods, rlang, stats,
+utils, yulab.utils (>= 0.2.3)","Rcpp","AnnotationHub, BiocManager, clusterProfiler, DOSE, knitr,
+org.Hs.eg.db, prettydoc, readr, rmarkdown, testthat, tidyr,
+tidyselect, ROCR",NA,"Artistic-2.0",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-06-28 11:14:53 UTC; windows",NA
+"gridExtra","gridExtra","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.3.1",NA,NA,"gtable, grid, grDevices, graphics, utils",NA,"ggplot2, egg, lattice, knitr, testthat",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:10:56 UTC; windows",NA
+"gridGraphics","gridGraphics","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5-1",NA,"grid, graphics","grDevices",NA,"magick (>= 1.3), pdftools (>= 1.6)",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:02:26 UTC; windows",NA
+"gson","gson","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.0",NA,NA,"jsonlite, methods, rlang, stats, tidyr, utils, yulab.utils (>=
+0.0.7)",NA,"digest, fs, testthat (>= 3.0.0)",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:40:53 UTC; windows",NA
 "gtable","gtable","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.6",NA,"R (>= 4.0)","cli, glue, grid, lifecycle, rlang (>= 1.1.0), stats",NA,"covr, ggplot2, knitr, profvis, rmarkdown, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:18:03 UTC; windows",NA
 "haven","haven","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.5.5",NA,"R (>= 3.6)","cli (>= 3.0.0), forcats (>= 0.2.0), hms, lifecycle, methods,
 readr (>= 0.1.0), rlang (>= 0.4.0), tibble, tidyselect, vctrs
@@ -243,6 +336,10 @@ otelsdk (>= 0.2.0), paws.common (>= 0.8.0), promises, rappdirs,
 rmarkdown, testthat (>= 3.1.8), tibble, webfakes (>= 1.4.0),
 xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:35:35 UTC; windows",NA
 "ids","ids","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.1",NA,NA,"openssl, uuid",NA,"knitr, rcorpora, rmarkdown, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 02:57:22 UTC; windows",NA
+"igraph","igraph","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.3.3",NA,"methods, R (>= 3.5.0)","cli, graphics, grDevices, lifecycle, magrittr, Matrix,
+pkgconfig (>= 2.0.0), rlang (>= 1.1.0), stats, utils, vctrs","cpp11 (>= 0.5.0)","ape (>= 5.7-0.1), callr, decor, digest, igraphdata, knitr,
+rgl (>= 1.3.14), rmarkdown, scales, stats4, tcltk, testthat,
+vdiffr, withr","graph","GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:30:39 UTC; windows",NA
 "ini","ini","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.1",NA,NA,NA,NA,"testthat",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:01:39 UTC; windows",NA
 "IRanges","IRanges","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.46.0",NA,"R (>= 4.0.0), methods, utils, stats, BiocGenerics (>= 0.53.2),
 S4Vectors (>= 0.47.6)","stats4","S4Vectors","XVector, GenomicRanges, Rsamtools, GenomicAlignments,
@@ -271,19 +368,34 @@ rstudioapi, svglite",NA,"GPL",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 02:15:50 U
 "limma","limma","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.68.4",NA,"R (>= 3.6.0)","grDevices, graphics, stats, utils, methods, statmod",NA,"BiasedUrn, ellipse, gplots, knitr, locfit, MASS, splines,
 affy, AnnotationDbi, Biobase, BiocStyle, GO.db, illuminaio,
 org.Hs.eg.db, vsn",NA,"GPL (>=2)",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-05-31 11:38:03 UTC; windows",NA
+"lme4","lme4","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0-6",NA,"R (>= 3.6), Matrix, methods, stats","MASS, Rdpack, boot, graphics, grid, lattice, minqa (>=
+1.1.15), nlme (>= 3.1-123), nloptr (>= 1.0.4), parallel,
+reformulas (>= 0.4.3.1), splines, utils","Matrix (>= 1.5-0), Rcpp (>= 1.1.1-1.1), RcppEigen (>=
+0.3.3.9.4)","DHARMa, HSAUR3, MEMSS, car, dfoptim, future.apply, gamm4,
+ggplot2, glmmTMB, gridExtra, knitr, merDeriv, mgcv, mlmRev,
+numDeriv, optimx (>= 2013.8.6), pbkrtest, performance,
+rmarkdown, rr2, see, semEff, statmod, testthat (>= 0.8.1),
+tibble",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:30:18 UTC; windows",NA
+"lmtest","lmtest","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.9-40",NA,"R (>= 3.0.0), stats, zoo","graphics",NA,"car, strucchange, sandwich, dynlm, stats4, survival, AER",NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:10:48 UTC; windows",NA
 "locfit","locfit","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5-9.12",NA,"R (>= 4.1.0)","lattice",NA,"interp, gam",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:44 UTC; windows",NA
 "lubridate","lubridate","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.9.5",NA,"methods, R (>= 3.2)","generics, timechange (>= 0.4.0)",NA,"covr, knitr, rmarkdown, testthat (>= 2.1.0), vctrs (>= 0.6.5)","chron, data.table, timeDate, tis, zoo","MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-18 02:36:08 UTC; windows",NA
 "magrittr","magrittr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.5",NA,"R (>= 3.4.0)",NA,NA,"covr, knitr, rlang, rmarkdown, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:14 UTC; windows",NA
 "MatrixGenerics","MatrixGenerics","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.24.0",NA,"matrixStats (>= 1.4.1)","methods",NA,"Matrix, sparseMatrixStats, SparseArray, DelayedArray,
 DelayedMatrixStats, SummarizedExperiment, testthat (>= 2.1.0)",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 11:26:40 UTC; windows",NA
+"MatrixModels","MatrixModels","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5-4",NA,"R (>= 3.6.0)","stats, methods, Matrix (>= 1.6-0), Matrix(< 1.8-0)",NA,NA,NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:10:49 UTC; windows",NA
 "matrixStats","matrixStats","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.0",NA,"R (>= 3.4.0)",NA,NA,"utils, base64enc, ggplot2, knitr, markdown, microbenchmark,
 R.devices, R.rsp",NA,"Artistic-2.0",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:17 UTC; windows",NA
 "memoise","memoise","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.1",NA,NA,"rlang (>= 0.4.10), cachem",NA,"digest, aws.s3, covr, googleAuthR, googleCloudStorageR, httr,
 testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:18:05 UTC; windows",NA
 "mime","mime","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.13",NA,NA,"tools",NA,NA,NA,"GPL",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:40:54 UTC; windows",NA
 "miniUI","miniUI","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.2",NA,NA,"shiny (>= 0.13), htmltools (>= 0.3), utils",NA,NA,NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 03:17:41 UTC; windows",NA
+"minqa","minqa","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.8",NA,NA,"Rcpp (>= 0.9.10)","Rcpp",NA,NA,"GPL-2",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:50:35 UTC; windows",NA
 "modelr","modelr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1.11",NA,"R (>= 3.2)","broom, magrittr, purrr (>= 0.2.2), rlang (>= 1.0.6), tibble,
 tidyr (>= 0.8.0), tidyselect, vctrs",NA,"compiler, covr, ggplot2, testthat (>= 3.0.0)",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 04:42:51 UTC; windows",NA
+"msigdbr","msigdbr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","26.1.0",NA,"R (>= 4.1)","assertthat, babelgene (>= 22.9), curl, dplyr (>= 1.1.1),
+lifecycle, methods, rlang, tibble, tidyselect (>= 1.2.0), tools",NA,"knitr, rmarkdown, roxygen2, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:37:17 UTC; windows",NA
+"nloptr","nloptr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.2.1",NA,NA,NA,NA,"knitr, rmarkdown, covr, tinytest",NA,"LGPL (>= 3)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:02:01 UTC; windows",NA
+"numDeriv","numDeriv","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2016.8-1.1",NA,"R (>= 2.11.1)",NA,NA,NA,NA,"GPL-2",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:41:07 UTC; windows",NA
 "openssl","openssl","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.4.2",NA,NA,"askpass",NA,"curl, testthat (>= 2.1.0), digest, knitr, rmarkdown,
 jsonlite, jose, sodium",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 02:18:19 UTC; windows",NA
 "openxlsx","openxlsx","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4.2.8.1",NA,"R (>= 3.3.0)","grDevices, methods, Rcpp, stats, stringi, utils, zip","Rcpp","curl, formula.tools, knitr, rmarkdown, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-18 02:17:18 UTC; windows",NA
@@ -296,6 +408,11 @@ jsonlite (>= 1.8.0), keyring (>= 1.4.0), pingr, pkgbuild (>=
 1.4.2), pkgcache (>= 2.2.4), pkgdepends (>= 0.9.0), pkgload,
 pkgsearch (>= 3.1.0), processx (>= 3.8.1), ps (>= 1.6.0),
 rstudioapi, testthat (>= 3.2.0), webfakes, withr, yaml",NA,"GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-15 23:51:22 UTC; windows",NA
+"patchwork","patchwork","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.3.2",NA,NA,"ggplot2 (>= 3.0.0), gtable (>= 0.3.6), grid, stats, grDevices,
+utils, graphics, rlang (>= 1.0.0), cli, farver",NA,"knitr, rmarkdown, gridGraphics, gridExtra, ragg, testthat (>=
+2.1.0), vdiffr, covr, png, gt (>= 0.11.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:50:56 UTC; windows",NA
+"pbkrtest","pbkrtest","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.5",NA,"R (>= 4.2.0), lme4 (>= 1.1.31)","broom, dplyr, MASS, methods, numDeriv, Matrix (>= 1.2.3), doBy
+(>= 4.6.22)",NA,"nlme, markdown, knitr",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 04:36:34 UTC; windows",NA
 "pheatmap","pheatmap","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.13",NA,"R (>= 2.0)","grid, RColorBrewer, scales, gtable, stats, grDevices, graphics",NA,NA,NA,"GPL-2",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:18:48 UTC; windows",NA
 "pillar","pillar","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.11.1",NA,NA,"cli (>= 2.3.0), glue, lifecycle, rlang (>= 1.0.2), utf8 (>=
 1.1.0), utils, vctrs (>= 0.5.0)",NA,"bit64, DBI, debugme, DiagrammeR, dplyr, formattable, ggplot2,
@@ -325,7 +442,11 @@ knitr, shiny (>= 1.1.0), shinytest2, curl, rmarkdown, Cairo,
 broom, webshot, listviewer, dendextend, sf, png, IRdisplay,
 processx, plotlyGeoAssets, forcats, withr, palmerpenguins,
 rversions, reticulate, rsvg, ggridges",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-04 03:47:58 UTC; windows",NA
+"plyr","plyr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.8.9",NA,"R (>= 3.1.0)","Rcpp (>= 0.11.0)","Rcpp","abind, covr, doParallel, foreach, iterators, itertools,
+tcltk, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:50:36 UTC; windows",NA
 "png","png","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.1-9",NA,"R (>= 2.9.0)",NA,NA,NA,NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:42:12 UTC; windows",NA
+"polyclip","polyclip","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.10-7",NA,"R (>= 3.5.0)",NA,NA,NA,NA,"BSL",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:42:27 UTC; windows",NA
+"polynom","polynom","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4-1",NA,NA,"stats, graphics",NA,"knitr, rmarkdown",NA,"GPL-2",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:02:49 UTC; windows",NA
 "praise","praise","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.0.0",NA,NA,NA,NA,"testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:00:40 UTC; windows",NA
 "prettyunits","prettyunits","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.0",NA,"R(>= 2.10)",NA,NA,"codetools, covr, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:15 UTC; windows",NA
 "processx","processx","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.9.0",NA,"R (>= 3.4.0)","ps (>= 1.9.3), R6, utils",NA,"callr (>= 3.7.3), cli (>= 3.3.0), codetools, covr, curl,
@@ -342,9 +463,12 @@ rlang, testthat (>= 3.0.0), webfakes, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA
 rlang (>= 1.1.1), vctrs (>= 0.6.3)","cli","carrier (>= 0.3.0), covr, dplyr (>= 0.7.8), httr, knitr,
 lubridate, mirai (>= 2.5.1), rmarkdown, testthat (>= 3.0.0),
 tibble, tidyselect",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 02:38:16 UTC; windows",NA
+"quantreg","quantreg","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","6.1",NA,"R (>= 3.5), stats, SparseM","methods, graphics, Matrix, MatrixModels, survival, MASS",NA,"interp, rgl, logspline, nor1mix, Formula, zoo, R.rsp, conquer",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:30:18 UTC; windows",NA
+"qvalue","qvalue","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.44.0",NA,"R(>= 2.10)","splines, ggplot2, grid, reshape2",NA,"knitr",NA,"LGPL",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-29 13:03:05 UTC; windows",NA
 "R6","R6","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.6.1",NA,"R (>= 3.6)",NA,NA,"lobstr, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:14 UTC; windows",NA
 "ragg","ragg","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.2",NA,NA,"systemfonts (>= 1.0.3), textshaping (>= 0.3.0)","systemfonts, textshaping","covr, graphics, grid, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 02:35:06 UTC; windows",NA
 "rappdirs","rappdirs","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.4",NA,"R (>= 4.1)",NA,NA,"covr, roxygen2, testthat (>= 3.2.0), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 00:58:58 UTC; windows",NA
+"rbibutils","rbibutils","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.4.1",NA,"R (>= 2.10)","utils, tools",NA,"testthat",NA,"GPL-2",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:02:02 UTC; windows",NA
 "rcmdcheck","rcmdcheck","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.0",NA,NA,"callr (>= 3.1.1.9000), cli (>= 3.0.0), curl, desc (>= 1.2.0),
 digest, pkgbuild, prettyunits, R6, rprojroot, sessioninfo (>=
 1.1.1), utils, withr, xopen",NA,"covr, knitr, mockery, processx, ps, rmarkdown, svglite,
@@ -352,10 +476,13 @@ testthat, webfakes",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07
 "RColorBrewer","RColorBrewer","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.1-3",NA,"R (>= 2.0.0)",NA,NA,NA,NA,"Apache License 2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-04-21 00:40:53 UTC; windows",NA
 "Rcpp","Rcpp","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.1.2",NA,"R (>= 3.5.0)","methods, utils",NA,"tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:16 UTC; windows",NA
 "RcppArmadillo","RcppArmadillo","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","15.4.0-1",NA,"R (>= 3.3.0)","Rcpp (>= 1.1.1), stats, utils, methods","Rcpp","tinytest, Matrix (>= 1.3.0), pkgKitten, reticulate, slam",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:58:25 UTC; windows",NA
+"RcppEigen","RcppEigen","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.3.4.0.2",NA,"R (>= 3.6.0)","Rcpp (>= 0.11.0), stats, utils","Rcpp","Matrix, inline, tinytest, pkgKitten, microbenchmark",NA,"GPL (>= 2) | file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:50:43 UTC; windows",NA
+"Rdpack","Rdpack","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.6.6",NA,"R (>= 2.15.0), methods","tools, utils, rbibutils (> 2.4)",NA,"grDevices, testthat, rstudioapi, rprojroot, gbRd",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:50:39 UTC; windows",NA
 "readr","readr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.2.0",NA,"R (>= 4.1)","cli, clipr, crayon, glue, hms (>= 0.4.1), lifecycle, methods,
 R6, rlang, tibble, utils, vroom (>= 1.7.0), withr","cpp11, tzdb (>= 0.1.1)","covr, curl, datasets, knitr, rmarkdown, spelling, stringi,
 testthat (>= 3.2.0), tzdb (>= 0.1.1), waldo, xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-18 03:56:59 UTC; windows",NA
 "readxl","readxl","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.0",NA,"R (>= 4.1)","cellranger, tibble (>= 2.0.1), utils","cpp11 (>= 0.5.5), progress","covr, knitr, rmarkdown, testthat (>= 3.1.6), withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 03:22:09 UTC; windows",NA
+"reformulas","reformulas","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.4",NA,NA,"stats, methods, Matrix, Rdpack",NA,"lme4, tinytest, glmmTMB, Formula",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 02:10:47 UTC; windows",NA
 "rematch","rematch","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.0",NA,NA,NA,NA,"covr, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:44 UTC; windows",NA
 "rematch2","rematch2","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.1.2",NA,NA,"tibble",NA,"covr, testthat",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 03:33:30 UTC; windows",NA
 "renv","renv","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.3",NA,NA,"utils",NA,"BiocManager, cli, compiler, covr, cpp11, curl, devtools,
@@ -366,6 +493,7 @@ rstudioapi, shiny, testthat, uuid, waldo, yaml, webfakes",NA,"MIT + file LICENSE
 knitr (>= 1.23), lifecycle, rlang (>= 1.0.0), rmarkdown,
 rstudioapi, utils, withr (>= 2.3.0)",NA,"covr, fortunes, miniUI, rprojroot, sessioninfo, shiny,
 spelling, styler (>= 1.2.0), testthat (>= 3.2.1)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 03:33:30 UTC; windows",NA
+"reshape2","reshape2","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.5",NA,"R (>= 3.1)","plyr (>= 1.8.1), Rcpp, stringr","Rcpp","covr, lattice, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:50:55 UTC; windows",NA
 "rjson","rjson","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.23",NA,"R (>= 4.0.0)",NA,NA,NA,NA,"GPL-2",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:44:27 UTC; windows",NA
 "rlang","rlang","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.3.0",NA,"R (>= 4.0.0)","utils",NA,"cli (>= 3.1.0), covr, crayon, desc, fs, glue, knitr,
 magrittr, methods, pillar, pkgload, rmarkdown, stats, testthat
@@ -386,6 +514,10 @@ lifecycle, methods, pkgload (>= 1.5.2), R6 (>= 2.1.2), rlang
 pkgconfig, rlang","cpp11 (>= 0.4.0)","callr, cli, DBItest (>= 1.8.0), decor, gert, gh, hms, httpuv,
 knitr, magrittr, rmarkdown, rvest, testthat (>= 3.0.0), withr,
 xml2",NA,"LGPL (>= 2.1)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 02:38:54 UTC; windows",NA
+"rstatix","rstatix","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.1.0",NA,"R (>= 3.3.0)","stats, utils, tidyr (>= 1.0.0), purrr, broom (>= 0.7.4), rlang
+(>= 0.3.1), tibble (>= 2.1.3), dplyr (>= 0.7.1), magrittr,
+corrplot, tidyselect (>= 1.2.0), car, generics (>= 0.0.2)",NA,"knitr, rmarkdown, ggpubr, graphics, emmeans, coin, boot,
+testthat (>= 3.1.7), spelling",NA,"GPL-2",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-24 11:45:26 UTC; windows",NA
 "rstudioapi","rstudioapi","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.19.0",NA,NA,NA,NA,"testthat, knitr, rmarkdown, clipr, covr, curl, jsonlite, R6,
 withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 00:59:27 UTC; windows",NA
 "rversions","rversions","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.0.0",NA,NA,"curl",NA,"pillar, testthat (>= 3.0.0), webfakes, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:02:31 UTC; windows",NA
@@ -407,6 +539,8 @@ rappdirs",NA,"testthat, knitr, rmarkdown, withr, shiny, curl",NA,"MIT + file LIC
 "scales","scales","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.4.0",NA,"R (>= 4.1)","cli, farver (>= 2.0.3), glue, labeling, lifecycle, R6,
 RColorBrewer, rlang (>= 1.1.0), viridisLite",NA,"bit64, covr, dichromat, ggplot2, hms (>= 0.5.0), stringi,
 testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 02:18:04 UTC; windows",NA
+"scatterpie","scatterpie","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.6",NA,"R (>= 4.1.0), ggplot2","ggforce, rlang, ggfun, stats, tidyr, dplyr, utils, yulab.utils
+(>= 0.1.6)",NA,"knitr, rmarkdown, prettydoc, maps, scales, cli",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:35:53 UTC; windows",NA
 "selectr","selectr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.6-0",NA,"R (>= 3.3)","R6",NA,"testthat, XML, xml2",NA,"BSD_3_clause + file LICENCE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 01:20:59 UTC; windows",NA
 "Seqinfo","Seqinfo","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.0",NA,"methods, BiocGenerics","stats, S4Vectors (>= 0.47.6), IRanges",NA,"GenomeInfoDb, GenomicRanges, BSgenome, GenomicFeatures,
 TxDb.Hsapiens.UCSC.hg38.knownGene,
@@ -431,6 +565,7 @@ shinytest2, showtext, testthat (>= 3.2.1), watcher, yaml",NA,"MIT + file LICENSE
 MatrixGenerics (>= 1.11.1), S4Vectors (>= 0.43.2), S4Arrays (>=
 1.11.1)","utils, stats, matrixStats, IRanges, XVector","S4Vectors, IRanges, XVector","HDF5Array, ExperimentHub, testthat, knitr, rmarkdown,
 BiocStyle",NA,"Artistic-2.0",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-05-01 20:55:46 UTC; windows",NA
+"SparseM","SparseM","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.84-2",NA,"R (>= 2.15), methods","graphics, stats, utils",NA,"knitr",NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:02:04 UTC; windows",NA
 "statmod","statmod","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.2",NA,"R (>= 3.0.0)","stats, graphics",NA,"MASS, tweedie",NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 00:59:28 UTC; windows",NA
 "stringi","stringi","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.8.7",NA,"R (>= 3.4)","tools, utils, stats",NA,NA,NA,"file LICENSE","yes",NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-21 00:41:07 UTC; windows",NA
 "stringr","stringr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.6.0",NA,"R (>= 4.1.0)","cli, glue (>= 1.6.1), lifecycle (>= 1.0.3), magrittr, rlang
@@ -461,6 +596,8 @@ shiny, usethis, vctrs (>= 0.1.0), xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes
 formattable, ggplot2, here, hms, htmltools, knitr, lubridate,
 nycflights13, pkgload, purrr, rmarkdown, stringi, testthat (>=
 3.0.2), tidyr, withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-07 03:09:10 UTC; windows",NA
+"tidydr","tidydr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.0.6",NA,NA,"cluster, ggfun, ggplot2, grid, rlang, stats, utils",NA,"knitr, rmarkdown, prettydoc, SingleCellExperiment,
+SummarizedExperiment",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:29:32 UTC; windows",NA
 "tidyr","tidyr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.3.2",NA,"R (>= 4.1.0)","cli (>= 3.4.1), dplyr (>= 1.1.0), glue, lifecycle (>= 1.0.3),
 magrittr, purrr (>= 1.0.1), rlang (>= 1.1.1), stringr (>=
 1.5.0), tibble (>= 2.1.1), tidyselect (>= 1.2.1), utils, vctrs
@@ -469,6 +606,8 @@ rmarkdown, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6
 "tidyselect","tidyselect","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.2.1",NA,"R (>= 3.4)","cli (>= 3.3.0), glue (>= 1.3.0), lifecycle (>= 1.0.3), rlang
 (>= 1.0.4), vctrs (>= 0.5.2), withr",NA,"covr, crayon, dplyr, knitr, magrittr, rmarkdown, stringr,
 testthat (>= 3.1.1), tibble (>= 2.1.3)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; ; 2026-07-14 02:38:15 UTC; windows",NA
+"tidytree","tidytree","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.8",NA,"R (>= 3.4.0)","ape, dplyr, lazyeval, magrittr, methods, rlang, tibble, tidyr,
+tidyselect, yulab.utils (>= 0.1.5), pillar, cli",NA,"testthat, utils",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 03:32:18 UTC; windows",NA
 "tidyverse","tidyverse","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.0",NA,"R (>= 3.3)","broom (>= 1.0.3), conflicted (>= 1.2.0), cli (>= 3.6.0),
 dbplyr (>= 2.3.0), dplyr (>= 1.1.0), dtplyr (>= 1.2.2), forcats
 (>= 1.0.0), ggplot2 (>= 3.4.1), googledrive (>= 2.0.0),
@@ -482,8 +621,14 @@ tidyr (>= 1.3.0), xml2 (>= 1.3.3)",NA,"covr (>= 3.6.1), feather (>= 0.3.5), glue
 (>= 0.2.0), knitr (>= 1.41), rmarkdown (>= 2.20), testthat (>=
 3.1.6)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-18 04:57:00 UTC; windows",NA
 "timechange","timechange","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.0",NA,"R (>= 3.3)",NA,"cpp11 (>= 0.2.7)","testthat (>= 0.7.1.99), knitr",NA,"GPL (>= 3)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-18 02:17:01 UTC; windows",NA
+"timeDate","timeDate","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","4052.112",NA,"R (>= 3.6.0), methods","graphics, utils, stats",NA,"RUnit",NA,"GPL (>= 2)",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-06-04 01:25:52 UTC; windows",NA
 "tinytex","tinytex","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.60",NA,NA,"xfun (>= 0.48)",NA,"testit, rstudioapi",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:55:53 UTC; windows",NA
+"treeio","treeio","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.36.1",NA,"R (>= 4.1.0)","ape, dplyr, jsonlite, magrittr, methods, rlang, stats, tibble,
+tidytree (>= 0.4.5), utils, yulab.utils (>= 0.1.6)",NA,"Biostrings, cli, ggplot2, ggtree, igraph, knitr, rmarkdown,
+phangorn, prettydoc, purrr, testthat, tidyr, vroom, xml2, yaml",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.0; ; 2026-05-09 09:06:40 UTC; windows",NA
+"tweenr","tweenr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.3",NA,"R (>= 3.2.0)","farver, magrittr, rlang, vctrs","cpp11 (>= 0.4.2)","testthat, covr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:12:46 UTC; windows",NA
 "tzdb","tzdb","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.5.0",NA,"R (>= 4.0.0)",NA,"cpp11 (>= 0.5.2)","covr, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-18 02:17:03 UTC; windows",NA
+"urca","urca","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.3-4",NA,"R (>= 2.0.0), methods","nlme, graphics, stats",NA,NA,NA,"GPL (>= 2)",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 02:10:49 UTC; windows",NA
 "urlchecker","urlchecker","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.0.0",NA,"R (>= 4.1)","cli, curl, gitcreds, rlang (>= 1.1.0), tools, utils, xml2",NA,"covr, testthat (>= 3.0.0), webfakes, withr",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:56:32 UTC; windows",NA
 "usethis","usethis","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.2.1",NA,"R (>= 4.1)","cli (>= 3.0.1), clipr (>= 0.3.0), crayon, curl (>= 2.7), desc
 (>= 1.4.2), fs (>= 1.3.0), gert (>= 1.4.1), gh (>= 1.2.1), glue
@@ -510,6 +655,7 @@ utils, waldo, xml2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w
 "whisker","whisker","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.4.1",NA,NA,NA,NA,"markdown",NA,"GPL-3",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-16 01:00:58 UTC; windows",NA
 "withr","withr","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.0.3",NA,"R (>= 3.6.0)","graphics, grDevices",NA,"callr, DBI, knitr, methods, rlang, rmarkdown (>= 2.12),
 RSQLite, testthat (>= 3.0.0)",NA,"MIT + file LICENSE",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-14 01:01:13 UTC; windows",NA
+"writexl","writexl","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.5.4",NA,NA,NA,NA,"spelling, readxl, nycflights13, testthat, bit64",NA,"BSD_2_clause + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:04:40 UTC; windows",NA
 "xfun","xfun","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.60",NA,"R (>= 3.2.0)","grDevices, stats, tools",NA,"testit, parallel, codetools, methods, rstudioapi, tinytex (>=
 0.30), mime, litedown (>= 0.6), commonmark, knitr (>= 1.50),
 remotes, pak, curl, xml2, jsonlite, magick, yaml, data.table,
@@ -521,8 +667,12 @@ qs2",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 202
 "XVector","XVector","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.52.0",NA,"R (>= 4.0.0), methods, BiocGenerics (>= 0.37.0), S4Vectors (>=
 0.27.12), IRanges (>= 2.43.8)","methods, utils, stats, tools, BiocGenerics, S4Vectors, IRanges","S4Vectors, IRanges","Biostrings, drosophila2probe, RUnit",NA,"Artistic-2.0",NA,NA,NA,NA,"yes","R 4.6.0; x86_64-w64-mingw32; 2026-04-29 10:56:17 UTC; windows",NA
 "yaml","yaml","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","2.3.12",NA,NA,NA,NA,"knitr, rmarkdown, testthat (>= 3.0.0)",NA,"BSD_3_clause + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-14 01:01:24 UTC; windows",NA
+"yulab.utils","yulab.utils","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","0.2.4",NA,"R (>= 4.2.0)","cli, digest, fs, methods, rappdirs, rlang, tools, utils",NA,"httr2, jsonlite, openssl, R.utils, testthat (>= 3.0.0)",NA,"Artistic-2.0",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-07-21 01:50:38 UTC; windows",NA
 "zip","zip","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","3.0.1",NA,NA,NA,"cli","callr, cli, curl, pillar, processx, R6, testthat, webfakes,
 withr",NA,"MIT + file LICENSE",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-16 01:01:02 UTC; windows",NA
+"zoo","zoo","D:/frda_cardio_analysis/scripts/R/renv/library/windows/R-4.6/x86_64-w64-mingw32","1.8-15",NA,"R (>= 3.1.0), stats","utils, graphics, grDevices, lattice (>= 0.20-27)",NA,"AER, coda, chron, ggplot2 (>= 3.5.0), mondate, scales,
+stinepack, strucchange, timeDate, timeSeries, tinyplot, tis,
+tseries, xts",NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-07-21 01:50:39 UTC; windows",NA
 "base","base","C:/Users/hp/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.6/x86_64-w64-mingw32/862924a9","4.6.1","base",NA,NA,NA,"methods","chron, date, round","Part of R 4.6.1",NA,NA,NA,NA,NA,"R 4.6.1; ; 2026-06-24 08:20:51 UTC; windows",NA
 "boot","boot","C:/Users/hp/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.6/x86_64-w64-mingw32/862924a9","1.3-32","recommended","R (>= 3.0.0), graphics, stats",NA,NA,"MASS, survival",NA,"Unlimited",NA,NA,NA,NA,"no","R 4.6.1; ; 2026-06-24 08:32:04 UTC; windows",NA
 "class","class","C:/Users/hp/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.6/x86_64-w64-mingw32/862924a9","7.3-23","recommended","R (>= 3.0.0), stats, utils","MASS",NA,NA,NA,"GPL-2 | GPL-3",NA,NA,NA,NA,"yes","R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:04 UTC; windows",NA
